@@ -1,0 +1,24 @@
+//Utils - Funkcje sass, Mixiny, pomocnicze klasy i selektory
+@import "utils/mixins";
+
+//base - Biblioteki główne, czcionki, ikonki, modyfikatory styli
+@import "base/reset";
+@import "base/variables";
+// @import "base/themes";
+
+//Layout - Nawigacja, grid, nagłówki, stopki, ogólne style formularzy
+@import "layout/body";
+@import "layout/typography";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/menu";
+
+//Components - przyciski, okładki, widgety itd.
+// @import "components/buttons";
+// @import "components/hamburger";
+
+//Bloki - bloki z gutenberga
+// @import "blocks/...";
+
+//Pages - Style dla konkretnej podstrony
+// @import "pages/single";

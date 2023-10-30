@@ -1,0 +1,176 @@
+h1,
+.h1 {
+    //font-size: lvw(48px, 1920, 30px, 768);
+    // line-height: 1.2;
+    // margin: 0 0 1em;
+    // font-weight: bold;
+
+    font-size: 57px;
+    font-family: "Northlane";
+}
+
+h2,
+.h2 {
+    // font-size: lvw(32px, 1920, 20px, 768);
+    // line-height: 1.2;
+    // margin: 0 0 1em;
+    // font-weight: bold;
+
+    font-size: 50px;
+    font-family: "Northlane";
+}
+
+h3,
+.h3 {
+    // font-size: lvw(28px, 1920, 17.5px, 768);
+    // line-height: 1.2;
+    // margin: 0 0 1em;
+    // font-weight: bold;
+
+    font-size: 43px;
+    font-family: "Northlane";
+}
+
+h4,
+.h4 {
+    // font-size: lvw(28px, 1920, 17.5px, 768);
+    // margin: 0 0 lvw(30px, 1920, 20px, 768);
+    // font-weight: bold;
+
+    font-size: 36px;
+    font-family: "Northlane";
+}
+
+h5,
+.h5 {
+    // font-size: lvw(28px, 1920, 16px, 768);
+    // margin: 0 0 lvw(30px, 1920, 20px, 768);
+    // font-weight: bold;
+    font-family: "Northlane";
+}
+
+h6,
+.h6 {
+    // font-size: lvw(28px, 1920, 15px, 768);
+    // margin: 0 0 1em;
+    // font-weight: bold;
+    
+    font-size: 29px;
+    font-family: "Northlane";
+}
+
+p,
+blockquote {
+    // margin: 0 0 1.75em;
+    // line-height: 1.5;
+    // font-size: lvw(20px, 1920, 13px, 768);
+}
+
+label {
+    cursor: pointer;
+    // line-height: 1.5;
+    // font-size: lvw(18px, 1920, 15px, 1000);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.4s ease;
+
+    img {
+        outline: none;
+    }
+}
+
+small {
+    font-size: 80%;
+}
+
+s,
+del,
+u {
+    position: relative;
+    &:after {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        white-space: nowrap;
+    }
+}
+
+dt,
+b,
+strong {
+    font-weight: bold;
+}
+
+li > ol,
+li > ul,
+dl > dd {
+    margin-bottom: 0;
+    line-height: 1.75rem;
+}
+
+em {
+    font-style: italic;
+}
+
+ol,
+ul {
+    // margin-bottom: 1.75em;
+    // padding-left: 1.5em;
+    li {
+        // margin-bottom: 0.3em;
+    }
+}
+
+sup {
+    vertical-align: super;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+@media (max-width: 768px) {
+    h1,
+    .h1 {
+        // font-size: 30px;
+        // margin-bottom: 20px;
+    }
+    h2,
+    .h2 {
+        // font-size: 20px;
+        // margin-bottom: 20px;
+    }
+    h3,
+    .h3 {
+        // font-size: 17.5px;
+        // margin-bottom: 20px;
+    }
+    h4,
+    .h4 {
+        // font-size: 17.5px;
+        // margin: 0 0 20px;
+    }
+    h5,
+    .h5 {
+        // font-size: 16px;
+        // margin: 0 0 20px;
+    }
+    h6,
+    .h6 {
+        // font-size: 14px;
+        // margin: 0 0 20px;
+    }
+    p,
+    blockquote {
+        // margin: 0 0 20px;
+    }
+    p,
+    blockquote {
+        // font-size: 13px;
+    }
+  
+}

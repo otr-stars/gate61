@@ -1,0 +1,41 @@
+{
+  "name": "gate61_theme",
+  "side-effects": true,
+  "version": "2.1.0",
+  "description": "Custom Gate 61 Offices Theme",
+  "main": "main.js",
+  "scripts": {
+    "build-dev": "webpack --mode=development --devtool=source-map",
+    "build": "webpack --mode=production",
+    "start": "webpack --watch --mode=development --devtool=source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CleanScripts/CleanTheme.git"
+  },
+  "keywords": [
+    "Wordpress",
+    "Theme",
+    "CleanScripts.com"
+  ],
+  "author": "CleanScripts.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/CleanScripts/CleanTheme/issues"
+  },
+  "homepage": "https://github.com/CleanScripts/CleanTheme#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "mini-css-extract-plugin": "^2.6.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-remove-empty-scripts": "^1.0.1"
+  },
+  "dependencies": {
+    "swiper": "^8.4.4",
+    "vanilla-lazyload": "^17.8.3"
+  }
+}

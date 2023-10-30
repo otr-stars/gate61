@@ -1,0 +1,12 @@
+$viewport: 1920; // Break poin w ktorym jest zrobiony projekt graficzny lub punk wyjściowy szablonu
+$mobile: 435; // Break point dla mobilki
+
+//* Definicje kolorów thema *//
+:root {
+  --color-white: #fff;
+  --color-grey: #D9D9D9;
+  --color-black: #000;
+  --color-black-light: #2B2B2B;
+  --color-green: #00442B;
+  --color-red: #F35136;
+}

@@ -1,0 +1,20 @@
+body {
+    opacity: 0;
+    transition: transform 0.35s 0s ease, opacity 0.35s 0s ease;
+}
+body.ready {
+    opacity: 1;
+}
+body #cs-nav {
+    transition: transform 0.6s 0s ease, opacity 0.6s 0s ease;
+}
+
+body.ready.load #cs-nav {
+    opacity: 0;
+    transform: translateY(2em);
+}
+
+body.ready #cs-nav {
+    opacity: 1;
+    transform: translateY(0);
+}
