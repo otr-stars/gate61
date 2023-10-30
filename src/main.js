@@ -21,7 +21,7 @@ function initMenu() {
 }
 
 // const csapp = new CsApp();
-window.csapp = new CsApp();
+const csapp = new CsApp();
 csapp.addPlugin('lazyLoad', new InterfaceLazyLoad(csapp));
 
 // csapp.addAction('domScripts', initMenu);

@@ -2,7 +2,7 @@ import LazyLoad from "vanilla-lazyload";
 
 export default class InterfaceLazyLoad {
     lazyLoadInstance = [];
-    constructor(csApp) {
+    constructor() {
         this.lazyLoadInstance = new LazyLoad({
             elements_selector: "[data-src]",
             load_delay: 100,

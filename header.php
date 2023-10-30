@@ -9,7 +9,7 @@
 
 <body <?php body_class(); ?>>
     <header class="header">
-        <?php cwt_the_logo('header-logo'); ?>
+        <?php cwt_the_logo('custom_logo','header-logo'); ?>
         <div class="header-menu menu">
             <?php wp_nav_menu(array(
                 'menu' => 'Menu',
