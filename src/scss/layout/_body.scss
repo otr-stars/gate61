@@ -15,6 +15,10 @@ body {
     font-family: "Helvetica Now Display";
     font-size: 16px;
     color: var(--color-black);
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 main {

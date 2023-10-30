@@ -1,26 +1,123 @@
 .header {
     position: relative;
-    padding: 10px 20px;
-    margin-bottom: 60px;
+    padding: vw(10px) vw(20px);
+    margin-bottom: vw(60px);
 
     &-logo {
         position: absolute;
-        top: 24px;
-        left: 20px;
+        top: vw(24px);
+        left: vw(20px);
         display: block;
-        width: 200px;
+        width: vw(200px);
         height: auto;
     }
 
     &-menu {
 
         a {
-            font-size: 17px;
-            padding: 10px 25px;
+            font-size: vw(17px);
+            padding: vw(10px) vw(25px);
             color: var(--color-black);
             
             &:hover {
                 color: var(--color-red);
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 1439px) {
+    .header {
+        padding: 10px 20px;
+
+        &-logo {
+            top: 24px;
+            left: 20px;
+        }
+
+        &-menu {
+
+            a {
+                font-size: 17px;
+                padding: 10px clamp(15px, vw(25px), 25px);
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .header {
+        padding: 20px;
+
+        &-logo {
+            z-index: 99;
+            top: 20px;
+            width: clamp(80px, vws(110px), 110px);
+        }
+
+        &-menu {
+            z-index: 98;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--color-white);
+            padding:  clamp(120px, vws(180px), 180px) 20px 40px;
+            flex-wrap: wrap;
+            align-content: center;
+
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+
+            ul {
+                width: 100%;
+                height: fit-content;
+                height: -moz-fit-content;
+                flex-wrap: wrap;
+            }
+
+            li {
+                width: 100%;
+                text-align: center;
+                margin: 0 0 clamp(5px, vws(10px), 10px) 0!important;
+
+                opacity: 0;
+                position: relative;
+                right: 100vw;
+            }
+
+            a {
+                width: fit-content;
+                width: -moz-fit-content;
+                font-size: clamp(16px, vws(30px), 30px);
+                margin: 0 auto;
+            }
+
+            .menu-language {
+                opacity: 0;
+                transition: opacity 0.9s ease;
+            }
+
+            &.is-active {
+                transform: translateX(0);
+
+                li {
+                    opacity: 1;
+                    right: 0vw;
+
+                    @for $i from 1 through 6 {
+                        &:nth-of-type(#{$i}) {
+                            transition: opacity 0.5s #{($i * 0.15) + 0.2}s ease, right 0.45s #{($i * 0.15) + 0.2}s ease;
+                        }
+                    }
+                }
+
+                .menu-language {
+                    opacity: 1;
+                }
             }
         }
     }

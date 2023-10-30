@@ -48,8 +48,8 @@ if (is_user_logged_in()) {
         echo '</pre>' . PHP_EOL;
     }
 
-    add_action('admin_footer', 'wpse_footer_db_queries');
-    add_action('wp_footer', 'wpse_footer_db_queries');
+    // add_action('admin_footer', 'wpse_footer_db_queries');
+    // add_action('wp_footer', 'wpse_footer_db_queries');
 }
 
 

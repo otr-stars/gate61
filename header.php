@@ -19,4 +19,9 @@
             )); ?>
             <a href="#language" class="menu-language">En</a>
         </div>
+        <div class="hamburger">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
     </header>

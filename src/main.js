@@ -8,15 +8,17 @@ import InterfaceLazyLoad from './js/libs/InterfaceLazyLoad';
 // import Swiper, { Navigation, Pagination } from 'swiper';
 
 
-// function initMenu() {
-//     let $mobileButton = document.querySelector('.hamburger');
-//     let $menu = document.querySelector('header .menu');
-//     if (!$mobileButton) return;
-//     $mobileButton.addEventListener('click', function () {
-//         $mobileButton.classList.toggle('is-active');
-//         $menu.classList.toggle('is-active');
-//     });
-// }
+function initMenu() {
+    let $mobileButton = document.querySelector('.hamburger');
+    let $menu = document.querySelector('header .header-menu');
+    let $body = document.querySelector('body');
+    if (!$mobileButton) return;
+    $mobileButton.addEventListener('click', function () {
+        $mobileButton.classList.toggle('is-active');
+        $menu.classList.toggle('is-active');
+        $body.classList.toggle('no-scroll');
+    });
+}
 
 // const csapp = new CsApp();
 window.csapp = new CsApp();
@@ -24,9 +26,6 @@ csapp.addPlugin('lazyLoad', new InterfaceLazyLoad(csapp));
 
 // csapp.addAction('domScripts', initMenu);
 
-csapp.addAction('beforLoad', function () {
-    console.log('Moja funkcja przed wczytaniem', this);
-});
 // new Swiper(".mySwiper", {
 //     modules: [Navigation, Pagination],
 //     navigation: {
@@ -37,7 +36,8 @@ csapp.addAction('beforLoad', function () {
 //         el: ".swiper-pagination",
 //     },
 // });
+
 docReady(() => {
     csapp.ready();
-    console.log('fasfsasaf')
+    initMenu();
 });

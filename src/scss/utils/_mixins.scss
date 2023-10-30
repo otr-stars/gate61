@@ -1,6 +1,16 @@
 @use "sass:math";
 
-@function vw($target, $width: 1920) {
+@function vwl($target, $width: 1920) {
+  $vw-context: ($width * 0.01) * 1px;
+  @return math.div($target, $vw-context) * 1.0000001vw;
+}
+
+@function vw($target, $width: 1440) {
+  $vw-context: ($width * 0.01) * 1px;
+  @return math.div($target, $vw-context) * 1.0000001vw;
+}
+
+@function vws($target, $width: 992) {
   $vw-context: ($width * 0.01) * 1px;
   @return math.div($target, $vw-context) * 1.0000001vw;
 }
