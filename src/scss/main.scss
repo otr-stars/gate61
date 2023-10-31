@@ -5,6 +5,7 @@
 @import "base/reset";
 @import "base/variables";
 @import "base/fonts";
+@import "./node_modules/swiper/swiper-bundle";
 
 // @import "base/themes";
 
@@ -21,6 +22,7 @@
 
 //Bloki - bloki z gutenberga
 @import "blocks/met";
+@import "blocks/adventages";
 
 //Pages - Style dla konkretnej podstrony
 // @import "pages/single";

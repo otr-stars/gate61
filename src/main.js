@@ -5,7 +5,7 @@ import {
     docReady,
 } from './js/libs/misc';
 import InterfaceLazyLoad from './js/libs/InterfaceLazyLoad';
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 
 function initMenu() {
@@ -20,22 +20,25 @@ function initMenu() {
     });
 }
 
-// const csapp = new CsApp();
+function adventagesSlider() {
+    const swiperAdventages = document.querySelector(".swiper--adventages");
+    if (!swiperAdventages) return;
+    new Swiper(".swiper--adventages", {
+      slidesPerView: 1.15,
+      spaceBetween: 10,
+        breakpoints: {
+          767: {
+            slidesPerView: 2.001,
+            spaceBetween: 20,
+          },
+        },
+    });
+}
+
 const csapp = new CsApp();
 csapp.addPlugin('lazyLoad', new InterfaceLazyLoad(csapp));
 
-// csapp.addAction('domScripts', initMenu);
-
-// new Swiper(".mySwiper", {
-//     modules: [Navigation, Pagination],
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-//     pagination: {
-//         el: ".swiper-pagination",
-//     },
-// });
+csapp.addAction("domScripts", adventagesSlider);
 
 docReady(() => {
     csapp.ready();

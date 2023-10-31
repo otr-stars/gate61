@@ -16,7 +16,7 @@ h2,
     // margin: 0 0 1em;
     // font-weight: bold;
 
-    font-size: 50px;
+    font-size: clamp(36px, vw(50px), 50px);
     font-family: "NorthlaneOne";
 }
 
