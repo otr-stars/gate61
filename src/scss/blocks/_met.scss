@@ -31,17 +31,18 @@
         bottom: 0;
         width: fit-content;
         width: moz-fit-content;
-        padding: 60px 45px 60px 90px;
+        padding: clamp(35px, vw(60px), 60px) clamp(20px, vw(45px), 45px) clamp(35px, vw(60px), 60px) clamp(20px, vw(90px), 90px);
         color: var(--color-white);
         background-color: var(--color-green);
         border-radius: 0 58px 0 0;
 
         h2 {
-            margin-bottom: 34px;
+            font-size: clamp(36px, vw(50px), 50px);
+            margin-bottom: clamp(15px, vw(34px), 34px);
         }
 
         p {
-            font-size: 28px;
+            font-size: clamp(16px, vw(28px), 28px);
             line-height: 1.35;
             margin-bottom: 0;
         }
@@ -85,5 +86,53 @@
     &-contact {
         font-size: clamp(21px, vw(32px), 32px);
         margin-left: auto;
+    }
+}
+
+
+
+@media(max-width: 767px) {
+    .met {
+
+        &-banner {
+            padding-bottom: 130px;
+        }
+
+        &-img {
+            width: calc(100% - 10px);
+            height: 450px;
+
+            img {
+                height: 100%;
+                width: auto;
+                max-width: initial;
+            }
+        }
+
+        &-text {
+            max-width: calc(100% - 10px);
+            width: 100%;
+
+            &::before {
+                width: calc(100% - 175px);
+                height: calc(100% + 35px);
+            }
+        }
+
+        &-content {
+            padding: 0 clamp(45px, vws(90px), 90px) 0 clamp(10px, vws(25px), 25px);
+
+            p {
+                margin-bottom: 35px;
+            }
+
+            strong {
+                margin-top: 35px;
+            }
+        }
+
+        &-contact {
+            margin-left: 0;
+        }
     }
 }

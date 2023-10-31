@@ -1,7 +1,7 @@
 .header {
     position: relative;
     padding: 10px 20px;
-    margin-bottom: clamp(25px, vw(60px), 60px);
+    margin-bottom: clamp(15px, vw(60px), 60px);
 
     &-logo {
         position: absolute;
@@ -30,7 +30,7 @@
 
 @media(max-width: 991px) {
     .header {
-        padding: 20px;
+        margin-bottom: 15px;
 
         &-logo {
             z-index: 99;
@@ -100,6 +100,17 @@
                     opacity: 1;
                 }
             }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .header {
+        display: flex;
+        align-items: center;
+
+        &-logo {
+            position: static;
         }
     }
 }
