@@ -16,11 +16,11 @@
 @import "layout/menu";
 
 //Components - przyciski, okładki, widgety itd.
-// @import "components/buttons";
+@import "components/buttons";
 @import "components/hamburger";
 
 //Bloki - bloki z gutenberga
-// @import "blocks/...";
+@import "blocks/met";
 
 //Pages - Style dla konkretnej podstrony
 // @import "pages/single";

@@ -1,0 +1,77 @@
+.btn {
+    display: block;
+    width: fit-content;
+    width: -moz-fit-content;
+    font-family: "NorthlaneOne";
+    padding: clamp(7px, vw(10px), 10px) 20px;
+    text-transform: uppercase;
+    border-radius: 58px;
+    font-size: 20px;
+    transition: color 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+
+    &-primary {
+        border: 1px solid var(--color-black);
+        color: var(--color-white);
+        background-color: var(--color-black);
+
+        &:hover {
+            border-color: #535353;
+            background-color: #535353;
+        }
+
+        &--green {
+            border: 1px solid var(--color-green);
+            color: var(--color-white);
+            background-color: var(--color-green);
+
+            &:hover {
+                border-color: #02291a;
+                background-color: #02291a;
+            }
+        }
+
+        &--red {
+            border: 1px solid var(--color-red);
+            color: var(--color-white);
+            background-color: var(--color-red);
+
+            &:hover {
+                border-color: #c13e28;
+                background-color: #c13e28;
+            }
+        }
+    }
+
+    &-outline {
+        border: 1px solid var(--color-black);
+        color: var(--color-black);
+        background-color: var(--color-white);
+
+        &:hover {
+            color: var(--color-white);
+            background-color: var(--color-black);
+        }
+
+        &--green {
+            border: 1px solid var(--color-green);
+            color: var(--color-green);
+            background-color: var(--color-white);
+
+            &:hover {
+                color: var(--color-white);
+                background-color: var(--color-green);
+            }
+        }
+
+        &--red {
+            border: 1px solid var(--color-red);
+            color: var(--color-red);
+            background-color: var(--color-white);
+
+            &:hover {
+                color: var(--color-white);
+                background-color: var(--color-red);
+            }
+        }
+    }
+}

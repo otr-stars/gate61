@@ -1,0 +1,89 @@
+.met {
+    margin-bottom: clamp(115px, vw(130px), 130px);
+
+    &-banner {
+        position: relative;
+        margin-bottom: clamp(85px, vw(105px), 105px);
+    }
+
+    &-img {
+        z-index: -1;
+        margin-left: auto;
+        width: vw(1177px);
+        height: vw(703px);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 58px 0 0 58px;
+
+        img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+        }
+    }
+
+    &-text {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: fit-content;
+        width: moz-fit-content;
+        padding: 60px 45px 60px 90px;
+        color: var(--color-white);
+        background-color: var(--color-green);
+        border-radius: 0 58px 0 0;
+
+        h2 {
+            margin-bottom: 34px;
+        }
+
+        p {
+            font-size: 28px;
+            line-height: 1.35;
+            margin-bottom: 0;
+        }
+
+        span {
+            display: block;
+        }
+
+        &::before {
+            z-index: -1;
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: calc(100% - clamp(125px, vw(150px), 150px));
+            height: calc(100% + clamp(35px, vw(75px), 75px));
+            background-color: var(--color-red);
+            border-radius: 0 58px 0 0;
+        }
+    }
+
+    &-content {
+        padding: 0 clamp(45px, vw(190px), 190px) 0 clamp(10px, vw(190px), 190px);
+
+        p {
+            font-size: clamp(20px, vw(34px), 34px);
+            margin-bottom: 20px;
+
+            strong {
+                font-size: clamp(24px, vw(36px), 36px);
+                font-family: "NorthlaneOne";
+                color: var(--color-red);
+                display: block;
+                text-transform: uppercase;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &-contact {
+        font-size: clamp(21px, vw(32px), 32px);
+        margin-left: auto;
+    }
+}
