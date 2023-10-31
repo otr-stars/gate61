@@ -1,6 +1,6 @@
 .footer {
     position: relative;
-    padding: vw(40px) vw(62.5px) vw(40px) vw(40px);
+    padding: 40px clamp(30px, vw(62.5px), 62.5px) 40px clamp(30px, vw(40px), 40px);
     color: var(--color-white);
     background-color: var(--color-green);
     display: flex;
@@ -8,9 +8,9 @@
     justify-content: space-between;
 
     &-logo {
-        width: vw(121px);
+        width: clamp(93px, vw(121px), 121px);
         height: auto;
-        margin-right: vw(20px);
+        margin-right: 20px;
     }
 
     &-menu {
@@ -21,8 +21,8 @@
         }
 
         a {
-            font-size: vw(24px);
-            padding: 0 vw(17.5px);
+            font-size: clamp(20px, vw(24px), 24px);
+            padding: 0 clamp(15px, vw(17.5px), 17.5px);
             color: var(--color-white);
             
             &:hover {
@@ -33,11 +33,11 @@
 
     &-copyrights {
         width: 100%;
-        padding: 0 vw(80px);
+        padding: 0 clamp(30px, vw(80px), 80px);
         position: absolute;
         left: 0;
-        bottom: vw(50px);
-        font-size: vw(16px);
+        bottom: 50px;
+        font-size: 16px;
         text-transform: uppercase;
         display: flex;
         justify-content: end;
@@ -55,30 +55,9 @@
 
 
 
-@media (max-width: 1439px) {
-    .footer {
-    
-        &-logo {
-            margin-right: 20px;
-        }
-    
-        &-menu {
-    
-            a {
-                font-size: clamp(17px, vw(24px), 24px);
-                padding: 0 clamp(15px, vw(17.5px), 17.5px);
-            }
-        }
-    
-        &-copyrights {
-            font-size: clamp(12px, vw(16px), 16px);
-        }
-    }
-}
-
 @media (max-width: 991px) {
     .footer {
-        padding: 35px 20px;
+        padding: 45px 30px;
 
         &-logo {
             min-width: 80px;
@@ -113,7 +92,13 @@
 @media (max-width: 767px) {
     .footer {
 
+        &-logo {
+            margin-left: 0;
+        }
+
         &-menu {
+            width: 50%;
+            margin-bottom: 80px;
 
             ul {
                 flex-wrap: wrap;
@@ -122,15 +107,18 @@
             li {
                 width: 100%;
                 text-align: center;
-                margin: 0 0 7.5px 0!important;
+                margin: 0 0 16px 0!important;
+
+                &:last-child {
+                    margin-bottom: 0!important;
+                }
             }
 
             a {
-                font-size: 18px;
-                width: fit-content;
-                width: -moz-fit-content;
-                margin: 0 auto;
-                padding: 7.5px 0;
+                width: 100%;
+                line-height: 1.35;
+                text-align: right;
+                padding: 0;
             }
         }
 
@@ -138,7 +126,6 @@
             flex-wrap: wrap;
 
             span {
-                font-size: 14px;
                 width: 100%;
                 text-align: center;
                 margin-bottom: 10px!important;

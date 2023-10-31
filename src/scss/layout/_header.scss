@@ -1,22 +1,22 @@
 .header {
     position: relative;
-    padding: vw(10px) vw(20px);
-    margin-bottom: vw(60px);
+    padding: 10px 20px;
+    margin-bottom: clamp(25px, vw(60px), 60px);
 
     &-logo {
         position: absolute;
-        top: vw(24px);
-        left: vw(20px);
+        top: 24px;
+        left: 20px;
         display: block;
-        width: vw(200px);
+        width: clamp(80px, vw(176px), 176px);
         height: auto;
     }
 
     &-menu {
 
         a {
-            font-size: vw(17px);
-            padding: vw(10px) vw(25px);
+            font-size: 17px;
+            padding: 10px clamp(15px, vw(25px), 25px);
             color: var(--color-black);
             
             &:hover {
@@ -27,25 +27,6 @@
 }
 
 
-
-@media(max-width: 1439px) {
-    .header {
-        padding: 10px 20px;
-
-        &-logo {
-            top: 24px;
-            left: 20px;
-        }
-
-        &-menu {
-
-            a {
-                font-size: 17px;
-                padding: 10px clamp(15px, vw(25px), 25px);
-            }
-        }
-    }
-}
 
 @media(max-width: 991px) {
     .header {
@@ -92,7 +73,7 @@
             a {
                 width: fit-content;
                 width: -moz-fit-content;
-                font-size: clamp(16px, vws(30px), 30px);
+                font-size: clamp(20px, vws(30px), 30px);
                 margin: 0 auto;
             }
 
