@@ -1,25 +1,25 @@
 .numbers {
-    padding: 0 105px 0 80px;
-    margin-bottom: 120px;
+    padding: 0 clamp(30px, vw(105px), 105px) 0 clamp(10px, vw(80px), 80px);
+    margin-bottom: clamp(90px, vw(120px), 120px);
     display: flex;
 
     &-tiles {
         width: vw(810px);
+        margin-right: vw(50px);
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-right: vw(50px);
     }
 
     &-tile {
         display: flex;
         flex-wrap: wrap;
-        width: calc(50% - 10px);
-        padding: 20px 40px 30px;
-        margin-bottom: 15px;
+        width: calc(50% - clamp(7.5px, vw(10px), 10px));
+        padding: clamp(10px, vw(20px), 20px) clamp(15px, vw(40px), 40px) clamp(15px, vw(30px), 30px);
+        margin-bottom: clamp(5px, vw(15px), 15px);
         color: var(--color-white);
-        border-radius: 58px;
-        height: 230px;
+        border-radius: clamp(25px, vw(58px), 58px);
+        min-height: clamp(100px, vw(230px), 230px);
 
         &--red {
             background-color: var(--color-red);
@@ -35,7 +35,7 @@
 
         &--grey {
             background-color: var(--color-grey);
-            color: var(--color-black);
+            color: #282828;
         }
 
         &--half {
@@ -47,13 +47,13 @@
         .title {
             width: 100%;
             font-family: "NorthlaneOne";
-            font-size: 64px;
+            font-size: clamp(28px, vw(64px), 64px);
             margin-bottom: 0;
             height: fit-content;
             height: -moz-fit-content;
 
             small {
-                font-size: 40px;
+                font-size: clamp(17.5px, vw(40px), 40px);
             }
 
             &--extended {
@@ -64,8 +64,8 @@
                     display: block;
                     width: fit-content;
                     width: -moz-fit-content;
-                    margin: 0 0 0 15px;
-                    font-size: 20px;
+                    margin: 0 0 0 clamp(5px, vw(15px), 15px);
+                    font-size: clamp(9px, vw(20px), 20px);
                     font-family: "HelveticaNowProTextRegular";
                 }
             }
@@ -74,6 +74,7 @@
         span {
             margin-top: auto;
             display: block;
+            font-size: clamp(10px, vw(20px), 20px);
         }
     }
 
@@ -83,9 +84,56 @@
         flex-wrap: wrap;
         align-content: space-between;
 
+        h2 {
+            margin-bottom: 30px;
+        }
+
         p {
             font-size: 20px;
             margin-bottom: 40px;
         }
+    }
+}
+
+
+
+@media(max-width: 991px) {
+    .numbers {
+        flex-wrap: wrap;
+        padding: 0 clamp(30px, vw(80px), 80px) 0;
+
+        &-tiles {
+            order: 2;
+            width: 100%;
+            margin-right: 0;
+        }
+
+        &-tile {
+            width: calc(50% - 3.5px);
+        }
+
+        &-content {
+            order: 1;
+            width: 100%;
+
+            h2 {
+
+                br {
+                    display: none;
+                }
+            }
+
+            p {
+                margin-bottom: 50px;
+                padding-right: clamp(20px, vws(50px), 50px);
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .numbers {
+        flex-wrap: wrap;
+        padding: 0 10px 0;
     }
 }
