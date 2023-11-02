@@ -1,0 +1,39 @@
+.gallery {
+    margin-bottom: clamp(95px, vw(135px), 135px);
+
+    &-title {
+        padding: 0 clamp(10px, vw(80px), 80px);
+        margin-bottom: clamp(20px, vw(50px), 50px);
+    }
+
+    .swiper {
+        padding: 0 clamp(10px, vw(80px), 80px);
+
+        &-slide {
+            aspect-ratio: 13 / 10;
+            max-height: 800px;
+            border-radius: clamp(18px, vw(43px), 43px);
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+
+
+@media(max-width: 767px) {
+    .gallery {
+
+        &-title {
+            padding: 0 10px;
+        }
+
+        .swiper {
+            padding: 0 10px;
+    
+            &-slide {
+                border-radius: 18px;
+            }
+        }
+    }
+}

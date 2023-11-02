@@ -86,12 +86,35 @@ function patioSlider() {
   });
 }
 
+function gallerySlider() {
+  const swiperGallery = document.querySelector(".swiper--gallery");
+  if (!swiperGallery) return;
+  new Swiper(".swiper--gallery", {
+    slidesPerView: 1.6,
+    spaceBetween: 25,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.075,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 1.06,
+          spaceBetween: 10,
+        },
+        992: {
+          spaceBetween: 25,
+        },
+      },
+  });
+}
+
 const csapp = new CsApp();
 csapp.addPlugin('lazyLoad', new InterfaceLazyLoad(csapp));
 
 csapp.addAction("domScripts", adventagesSlider);
 csapp.addAction("domScripts", modernizationSlider);
 csapp.addAction("domScripts", patioSlider);
+csapp.addAction("domScripts", gallerySlider);
 
 docReady(() => {
     csapp.ready();
