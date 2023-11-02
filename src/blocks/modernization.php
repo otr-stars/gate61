@@ -1,4 +1,4 @@
-<div class="modernization">
+<div id="modernization" class="modernization">
     <h2 class="modernization-title"><?php _e('Obszary modernizacji', 'gate') ?></h2>
 
     <div class="modernization-container">

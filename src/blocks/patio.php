@@ -1,4 +1,4 @@
-<div class="patio">
+<div id="patio" class="patio">
     <div class="patio-container">
         <div class="patio-content">
             <h2><?php _e('Zielone patio', 'gate') ?></h2>

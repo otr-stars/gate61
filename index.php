@@ -10,6 +10,7 @@ get_header();
     <?php include get_theme_file_path().'/src/blocks/patio.php'; ?>
     <?php include get_theme_file_path().'/src/blocks/numbers.php'; ?>
     <?php include get_theme_file_path().'/src/blocks/gallery.php'; ?>
+    <?php include get_theme_file_path().'/src/blocks/contact.php'; ?>
 </main>
 
 <?php
