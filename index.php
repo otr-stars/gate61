@@ -7,6 +7,7 @@ get_header();
     <?php include get_theme_file_path().'/src/blocks/met.php'; ?>
     <?php include get_theme_file_path().'/src/blocks/adventages.php'; ?>
     <?php include get_theme_file_path().'/src/blocks/modernization.php'; ?>
+    <?php include get_theme_file_path().'/src/blocks/patio.php'; ?>
 </main>
 
 <?php

@@ -31,11 +31,11 @@ function adventagesSlider() {
             slidesPerView: 1.07,
             spaceBetween: 10,
           },
-          575: {
+          576: {
             slidesPerView: 2.15,
             spaceBetween: 10,
           },
-          991: {
+          992: {
             spaceBetween: 20,
           },
         },
@@ -53,11 +53,33 @@ function modernizationSlider() {
           slidesPerView: 1.075,
           spaceBetween: 10,
         },
-        575: {
+        576: {
           slidesPerView: 1.38,
           spaceBetween: 10,
         },
-        991: {
+        992: {
+          spaceBetween: 20,
+        },
+      },
+  });
+}
+
+function patioSlider() {
+  const swiperPatio = document.querySelector(".swiper--patio");
+  if (!swiperPatio) return;
+  new Swiper(".swiper--patio", {
+    slidesPerView: 1.05,
+    spaceBetween: 20,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.075,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 1.05,
+          spaceBetween: 10,
+        },
+        992: {
           spaceBetween: 20,
         },
       },
@@ -69,6 +91,7 @@ csapp.addPlugin('lazyLoad', new InterfaceLazyLoad(csapp));
 
 csapp.addAction("domScripts", adventagesSlider);
 csapp.addAction("domScripts", modernizationSlider);
+csapp.addAction("domScripts", patioSlider);
 
 docReady(() => {
     csapp.ready();
