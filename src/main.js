@@ -46,15 +46,15 @@ function modernizationSlider() {
   const swiperModernization = document.querySelector(".swiper--modernization");
   if (!swiperModernization) return;
   new Swiper(".swiper--modernization", {
-    slidesPerView: 1.35,
+    slidesPerView: 1.38,
     spaceBetween: 20,
       breakpoints: {
         320: {
-          slidesPerView: 1.15,
+          slidesPerView: 1.075,
           spaceBetween: 10,
         },
         575: {
-          slidesPerView: 1.35,
+          slidesPerView: 1.38,
           spaceBetween: 10,
         },
         991: {

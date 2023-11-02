@@ -1,7 +1,7 @@
 .modernization {
     position: relative;
     margin-bottom: 80px;
-    padding: 70px 0 80px 80px;
+    padding: clamp(50px, vw(70px), 70px) 0 clamp(50px, vw(80px), 80px) clamp(10px, vw(80px), 80px);
 
     &::before {
         z-index: -1;
@@ -29,22 +29,22 @@
     &-content {
         color: var(--color-white);
         width: 100%;
-        max-width: 435px;
+        max-width: clamp(350px, vw(435px), 435px);
 
         h3 {
             font-size: clamp(24px, vw(32px), 32px);
             margin-bottom: clamp(20px, vw(30px), 30px);
-            padding-right: 80px;
+            padding-right: clamp(40px, vw(80px), 80px);
         }
 
         p {
-            padding-right: 110px;
+            padding-right: clamp(55px, vw(110px), 110px);
             margin-bottom: 0;
         }
     }
 
     .swiper {
-        padding-right: 80px;
+        padding-right: clamp(10px, vw(80px), 80px);
         flex: 1;
 
         &-slide {
@@ -69,6 +69,68 @@
                 color: var(--color-white);
                 background-color: var(--color-green);
             }
+        }
+    }
+}
+
+
+
+@media(max-width: 991px) {
+    .modernization {
+
+        &::before {
+            width: 550px;
+            max-width: calc(100% - 10px);
+        }
+        
+        &-container {
+            flex-wrap: wrap;
+
+            p {
+                margin-bottom: 60px;
+            }
+        }
+
+        .swiper {
+            flex: initial;
+
+            &-slide {
+                margin-bottom: 35px;
+                
+                span {
+                    background-color: transparent;
+                    top: initial;
+                    left: 15px;
+                    bottom: -36px;
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+                }
+            }
+
+            &-slide-active {
+
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .modernization {
+        padding: 50px 0 50px 20px;
+
+        &-title {
+            padding-right: 20px;
+        }
+
+        &-content {
+            width: calc(100% - 10px);
+        }
+
+        .swiper {
+            margin-left: -10px;
         }
     }
 }

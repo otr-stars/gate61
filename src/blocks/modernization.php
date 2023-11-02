@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(43, 'full')[0] ?>');">
-                    <span><?php _e('Funkcjonalny hol wejściowy', 'gate') ?></span>
+                    <span><?php _e('Lobby wypełnione światłem', 'gate') ?></span>
                 </div>
 
                 <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(46, 'full')[0] ?>');">
