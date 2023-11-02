@@ -24,11 +24,18 @@ function adventagesSlider() {
     const swiperAdventages = document.querySelector(".swiper--adventages");
     if (!swiperAdventages) return;
     new Swiper(".swiper--adventages", {
-      slidesPerView: 1.15,
-      spaceBetween: 10,
+      slidesPerView: 2.15,
+      spaceBetween: 20,
         breakpoints: {
-          767: {
-            slidesPerView: 2.001,
+          320: {
+            slidesPerView: 1.07,
+            spaceBetween: 10,
+          },
+          575: {
+            slidesPerView: 2.15,
+            spaceBetween: 10,
+          },
+          991: {
             spaceBetween: 20,
           },
         },
