@@ -1,0 +1,74 @@
+.modernization {
+    position: relative;
+    margin-bottom: 80px;
+    padding: 70px 0 80px 80px;
+
+    &::before {
+        z-index: -1;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: vw(930px);
+        height: 100%;
+        background-color: var(--color-green);
+        border-radius: 0 58px 58px 0;
+    }
+
+    &-title {
+        color: var(--color-white);
+        margin-bottom: clamp(40px, vw(65px), 65px);
+    }
+
+    &-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &-content {
+        color: var(--color-white);
+        width: 100%;
+        max-width: 435px;
+
+        h3 {
+            font-size: clamp(24px, vw(32px), 32px);
+            margin-bottom: clamp(20px, vw(30px), 30px);
+            padding-right: 80px;
+        }
+
+        p {
+            padding-right: 110px;
+            margin-bottom: 0;
+        }
+    }
+
+    .swiper {
+        padding-right: 80px;
+        flex: 1;
+
+        &-slide {
+            position: relative;
+            aspect-ratio: 9 / 7;
+            background-position: center;
+            background-size: cover;
+            border-radius: 43px;
+            max-height: 650px;
+
+            span {
+                position: absolute;
+                top: 57px;
+                left: 0;
+                display: block;
+                width: fit-content;
+                width: -moz-fit-content;
+                text-transform: uppercase;
+                padding: 2px 10px;
+                font-family: "NorthlaneOne";
+                font-size: clamp(15px, vw(24px), 24px);
+                color: var(--color-white);
+                background-color: var(--color-green);
+            }
+        }
+    }
+}

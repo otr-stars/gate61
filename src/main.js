@@ -42,10 +42,33 @@ function adventagesSlider() {
     });
 }
 
+function modernizationSlider() {
+  const swiperModernization = document.querySelector(".swiper--modernization");
+  if (!swiperModernization) return;
+  new Swiper(".swiper--modernization", {
+    slidesPerView: 1.35,
+    spaceBetween: 20,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.15,
+          spaceBetween: 10,
+        },
+        575: {
+          slidesPerView: 1.35,
+          spaceBetween: 10,
+        },
+        991: {
+          spaceBetween: 20,
+        },
+      },
+  });
+}
+
 const csapp = new CsApp();
 csapp.addPlugin('lazyLoad', new InterfaceLazyLoad(csapp));
 
 csapp.addAction("domScripts", adventagesSlider);
+csapp.addAction("domScripts", modernizationSlider);
 
 docReady(() => {
     csapp.ready();
