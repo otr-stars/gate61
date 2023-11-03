@@ -1,0 +1,198 @@
+.standard {
+    position: relative;
+    padding-top: 90px;
+    margin-bottom: clamp(80px, vw(120px), 120px);
+
+    &-title {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: clamp(25px, vw(60px), 60px) clamp(20px, vw(90px), 90px) clamp(20px, vw(60px), 60px) clamp(30px, vw(70px), 70px);
+        color: var(--color-white);
+        background-color: var(--color-red);
+        border-radius: 0 58px 58px 0;
+        line-height: 1.2;
+    }
+
+    &-wrapper {
+        position: relative;
+    }
+
+    &-img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &-list {
+        list-style: none;
+    }
+
+    &-item {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+
+        &:hover {
+
+            .icon {
+                transform: scale(1.15);
+            }
+
+            .description {
+                opacity: 1;
+            }
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(45px, vw(60px), 60px);
+            aspect-ratio: 1 / 1;
+            height: fit-content;
+            height: -moz-fit-content;
+            border-radius: 50%;
+            margin-right: clamp(5px, vw(15px), 15px);
+            color: var(--color-red);
+            background-color: var(--color-white);
+            cursor: pointer;
+            transition: transform 0.4s ease;
+        }
+
+        .description {
+            width: max-content;
+            padding: clamp(7.5px, vw(15px), 15px) clamp(7.5px, vw(15px), 15px) clamp(7.5px, vw(15px), 15px) clamp(12.5px, vw(25px), 25px);
+            font-size: clamp(18px, vw(22px), 22px);
+            border-radius: clamp(18px, vw(28px), 28px);
+            background-color: var(--color-white);
+            pointer-events: none;
+            position: absolute;
+            opacity: 0;
+            left: clamp(55px, vw(75px), 75px);
+            transition: opacity 0.4s ease;
+        }
+
+        &--1 {
+            top: vw(66px);
+            left: vw(561px);
+            font-size: clamp(22px, vw(27px), 27px);
+        }
+
+        &--2 {
+            top: vw(66px);
+            left: vw(1120px);
+            font-size: clamp(22px, vw(27px), 27px);
+        }
+
+        &--3 {
+            top: vw(194px);
+            left: vw(834px);
+            font-size: clamp(28px, vw(36px), 36px);
+        }
+
+        &--4 {
+            top: vw(259px);
+            left: vw(128px);
+            font-size: clamp(28px, vw(36px), 36px);
+        }
+
+        &--5 {
+            top: vw(289px);
+            left: vw(528px);
+            font-size: clamp(27px, vw(36px), 36px);
+        }
+
+        &--6 {
+            top: vw(622px);
+            left: vw(557px);
+            font-size: clamp(27px, vw(36px), 36px);
+        }
+
+        &--7 {
+            top: vw(573px);
+            left: vw(973px);
+            font-size: clamp(35px, vw(45px), 45px);
+        }
+    }
+}
+
+
+
+@media(max-width: 991px) {
+    .standard {
+
+        &-img {
+            margin-bottom: 30px;
+            min-height: 375px;
+        }
+    
+        &-list {
+            padding: 0 clamp(5px, vws(15px), 15px) 0 clamp(10px, vws(20px), 20px);
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        &-item {
+            width: calc(50% - clamp(5px, vws(15px), 15px));
+            margin-right: clamp(5px, vws(15px), 15px);
+            margin-bottom: 35px;
+            position: initial;
+            align-items: center;
+
+            &:hover {
+
+                .icon {
+                    transform: scale(1);
+                }
+            }
+
+            &--1 {
+                font-size: clamp(20px, vws(27px), 27px);
+            }
+    
+            &--2 {
+                font-size: clamp(20px, vws(27px), 27px);
+            }
+    
+            &--3 {
+                font-size: clamp(26px, vws(36px), 36px);
+            }
+    
+            &--4 {
+                font-size: clamp(26px, vws(36px), 36px);
+            }
+    
+            &--5 {
+                font-size: clamp(25px, vws(36px), 36px);
+            }
+    
+            &--6 {
+                font-size: clamp(25px, vws(36px), 36px);
+            }
+    
+            &--7 {
+                font-size: clamp(33px, vws(45px), 45px);
+            }
+    
+            .icon {
+                width: clamp(40px, vws(60px), 60px);
+                margin-right: clamp(10px, vws(25px), 25px);
+                background-color: var(--color-grey);
+                cursor: initial;
+
+            }
+    
+            .description {
+                flex: 1;
+                font-size: clamp(14px, vws(22px), 22px);
+                padding: 0;
+                position: initial;
+                opacity: 1;
+            }
+        }
+    }
+}
