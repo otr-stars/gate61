@@ -9,7 +9,6 @@ const outputPath = 'dist';
 module.exports = {
     entry: {
         main: './src/main.js',
-        "block/example/index": './src/blocks/example/index.js',
     },
     output: {
         path: path.resolve(__dirname, outputPath),  

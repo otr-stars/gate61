@@ -5,7 +5,7 @@ import {
     docReady,
 } from './js/libs/misc';
 import InterfaceLazyLoad from './js/libs/InterfaceLazyLoad';
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Pagination } from 'swiper';
 
 
 function initMenu() {
@@ -108,6 +108,24 @@ function gallerySlider() {
   });
 }
 
+function levelsSlider() {
+  const swiperLevels = document.querySelector(".swiper--levels");
+  if (!swiperLevels) return;
+
+  new Swiper(".swiper--levels", {
+    modules: [Pagination],
+    spaceBetween: 25,
+    simulateTouch: false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="btn btn-outline ' + className + '">Piętro ' + (index + 2) + "</span>";
+      },
+    },
+  });
+}
+
 const csapp = new CsApp();
 csapp.addPlugin('lazyLoad', new InterfaceLazyLoad(csapp));
 
@@ -115,6 +133,7 @@ csapp.addAction("domScripts", adventagesSlider);
 csapp.addAction("domScripts", modernizationSlider);
 csapp.addAction("domScripts", patioSlider);
 csapp.addAction("domScripts", gallerySlider);
+csapp.addAction("domScripts", levelsSlider);
 
 docReady(() => {
     csapp.ready();
