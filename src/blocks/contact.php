@@ -50,4 +50,8 @@
             <a class="link" href="mailto:kontakt@gate61.pl" target="_blank">kontakt@gate61.cpl</a>
         </div>
     </div>
+    <div class="contact-form">
+        <h2 class="title"><?php _e('Napisz <br>do nas', 'gate') ?></h2>
+        <?= do_shortcode('[contact-form-7 id="63" title="Contact form PL"]') ?>
+    </div>
 </div>

@@ -1,0 +1,85 @@
+form {
+    p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    input {
+        width: 100%;
+        background-color: var(--color-white);
+        border: 2px solid var(--color-black-light);
+        padding: 20px 25px;
+        font-size: 18px;
+        border-radius: 58px;
+        margin-bottom: 15px;
+    }
+
+    textarea {
+        width: 100%;
+        background-color: var(--color-white);
+        border: 2px solid var(--color-black-light);
+        padding: 10px 25px;
+        font-size: 18px;
+        border-radius: 40px;
+        margin-bottom: 15px;
+    }
+
+    .input {
+
+        &--half {
+            width: calc(50% - 10px);
+        }
+
+        &--full {
+            width: 100%;
+        }
+    }
+
+    .wpcf7-form-control-wrap {
+        width: 100%;
+
+        label {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            margin: 0;
+            margin-right: 7px;
+        }
+    }
+
+    .submit {
+        transition: opacity 0.4s ease, color 0.4s ease, background-color 0.4s ease;
+        cursor: pointer;
+        margin-bottom: 0;
+
+        &[disabled] {
+            opacity: 0.5;
+            cursor: none;
+        }
+    }
+}
+
+
+
+@media(max-width: 767px) {
+    form {
+
+        input {
+            margin-bottom: 10px;
+        }
+    
+        .input {
+    
+            &--half {
+                width: calc(50% - 5px);
+            }
+        }
+    }
+}

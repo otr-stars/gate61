@@ -1,7 +1,7 @@
 .contact {
     &-wrapper {
-        margin-right: 80px;
-        padding: 60px 60px 80px 80px;
+        margin-right: clamp(10px, vw(80px), 80px);
+        padding: clamp(50px, vw(60px), 60px) clamp(20px, vw(60px), 60px) 80px clamp(30px, vw(80px), 80px);
         background-color: var(--color-green);
         border-radius: 0 58px 58px 0;
     }
@@ -10,50 +10,51 @@
         display: flex;
         justify-content: space-between;
         color: var(--color-white);
-        margin-bottom: 45px;
+        margin-bottom: clamp(25px, vw(45px), 45px);
 
         h2 {
-            font-size: 40px;
+            font-size: clamp(36px, vw(40px), 40px);
         }
 
         img {
-            width: 154px;
+            width: clamp(100px, vw(154px), 154px);
             height: auto;
         }
     }
 
     &-list {
         display: flex;
+        justify-content: space-between;
     }
 
     &-person {
         display: flex;
         align-items: end;
+        max-width: 48%;
 
         .img {
-            width: 270px;
+            width: vw(270px);
             aspect-ratio: 8 / 9;
-            // max-height: 800px;
-            border-radius: 58px;
+            border-radius: clamp(36px, vw(58px), 58px);
             background-position: center;
             background-size: cover;
-            margin-right: 35px;
+            margin-right: clamp(15px, vw(35px), 35px);
         }
 
         .content {
             flex: 1;
-            margin-bottom: 25px;
+            margin-bottom: vw(25px);
             color: var(--color-white);
         }
 
         .name {
-             font-size: 24px;
-             margin-bottom: 20px;
+             font-size: clamp(20px, vw(24px), 24px);
+             margin-bottom: clamp(15px, vw(20px), 20px);
         }
 
         .position {
-            font-size: 20px;
-            margin-bottom: 20px;
+            font-size: clamp(16px, vw(20px), 20px);
+            margin-bottom: clamp(15px, vw(20px), 20px);
         }
 
         .phone, .mail {
@@ -68,7 +69,7 @@
 
         .phone {
             color: var(--color-red);
-            font-size: 24px;
+            font-size: clamp(20px, vw(24px), 24px);
             font-family: "NorthlaneOne";
 
             
@@ -76,40 +77,40 @@
 
         .mail {
             color: var(--color-white);
-            font-size: 18px;
+            font-size: clamp(14px, vw(18px), 18px);
         }
 
         &:first-child {
-            margin-right: 50px;
+            margin-right: vw(50px);
         }
     }
 
     &-info {
-        margin-bottom: 125px;
-        margin-right: 80px;
+        margin-bottom: clamp(70px, vw(125px), 125px);
+        margin-right: clamp(10px, vw(80px), 80px);
         display: flex;    
     }
 
     &-landlord, &-management {
         width: 50%;
-        min-height: 510px;
-        padding: 80px 80px 60px 80px;
+        min-height: clamp(350px, vw(510px), 510px);
+        padding: clamp(65px, vw(80px), 80px) clamp(50px, vw(80px), 80px) clamp(55px, vw(60px), 60px) clamp(30px,vw(80px), 80px);
         height: fit-content;
         height: -moz-fit-content;
 
         .title {
-            font-size: 36px;
+            font-size: clamp(32px, vw(36px), 36px);
             margin-bottom: 30px;
         }
 
         .address {
-            font-size: 24px;
+            font-size: clamp(20px, vw(24px), 24px);
             font-family: "NorthlaneOne";
             line-height: 1.21;
         }
 
         .link {
-            font-size: 24px;
+            font-size: clamp(20px, vw(24px), 24px);
             font-family: "NorthlaneOne";
             color: var(--color-red);
 
@@ -119,7 +120,7 @@
 
             &-title {
                 display: block;
-                font-size: 24px;
+                font-size: clamp(20px, vw(24px), 24px);
                 font-family: "NorthlaneOne";
             }
         }
@@ -135,7 +136,7 @@
         }
 
         .text {
-            font-size: 20px;
+            font-size: clamp(16px, vw(20px), 20px);
             margin-bottom: 40px;
         }
     }
@@ -151,6 +152,188 @@
 
         .address {
             margin-bottom: 45px;
+        }
+    }
+
+    &-form {
+        margin-bottom: clamp(80px, vw(165px), 165px);
+        display: flex;
+        padding: 0 clamp(10px, vw(80px), 80px) 0 clamp(10px, vw(80px), 80px);
+
+        .title {
+            width: 100%;
+            max-width: vw(230px);
+            margin-right: vw(80px);
+        }
+
+        form {
+            flex: 1;
+            position: relative;
+            padding-right: clamp(135px, vw(180px), 180px);
+            margin-right: vw(80px);
+
+            input[type="submit"] {
+                position: absolute;
+                bottom: 75px;
+                right: 0;
+                font-size: clamp(21px, vw(24px), 24px);
+                padding: clamp(7px, vw(10px), 10px) clamp(20px, vw(35px), 35px);
+            }
+        }
+    }
+}
+
+
+
+@media(max-width: 991px) {
+    .contact {
+    
+        &-person {
+            max-width: 46%;
+            flex-wrap: wrap;
+    
+            .img {
+                width: 270px;
+                border-radius: 58px;
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+    
+            .content {
+                width: 100%;
+                flex: initial;
+                margin-bottom: 0;
+            }
+    
+            .name {
+                 font-size: 24px;
+                 margin-bottom: 10px;
+            }
+    
+            .position {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+
+            .phone {
+                font-size: 24px;
+                margin-bottom: 0;
+            }
+    
+            .mail {
+                font-size: 20px;
+            }
+    
+            &:first-child {
+                margin-right: 0;
+            }
+        }
+
+        &-form {
+            flex-wrap: wrap;
+    
+            .title {
+                max-width: initial;
+                margin-right: 0;
+                margin-bottom: 30px;
+
+                br {
+                    display: none;
+                }
+            }
+    
+            form {
+                flex: initial;
+                width: 100%;
+                position: relative;
+                padding-right: 0;
+                margin-right: 0;
+                padding-bottom: 50px;
+    
+                input[type="submit"] {
+                    bottom: 0;
+                    font-size: 21px;
+                    padding: 7px 20px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .contact {
+
+        &-wrapper {
+            margin-right: 10px;
+            padding: 50px 20px 90px 30px;
+        }
+
+        &-title {
+
+            img {
+                display: none;
+            }
+        }
+    
+        &-list {
+            flex-wrap: wrap;
+        }
+    
+        &-person {
+            max-width: initial;
+            width: 100%;
+            margin-bottom: 80px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-info {
+            flex-wrap: wrap;
+
+            margin-bottom: 70px;
+            margin-right: 10px;
+        }
+
+        &-landlord, &-management {
+            width: 100%;
+            min-height: initial;
+            padding: 65px 50px 55px 30px;
+    
+            .title {
+                font-size: 36px;
+                margin-bottom: 35px;
+            }
+    
+            .address {
+                font-size: 24px;
+            }
+    
+            .link {
+                font-size: 24px;
+    
+                &-title {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        &-landlord {
+            border-radius: 0 58px 58px 0;
+    
+            .address {
+                margin-bottom: 40px;
+            }
+    
+            .text {
+                font-size: 20px;
+            }
+        }
+
+        &-form {
+            margin-bottom: 80px;
+            padding: 0 10px 0 10px;
         }
     }
 }
