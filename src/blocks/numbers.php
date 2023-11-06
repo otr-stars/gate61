@@ -26,16 +26,16 @@
             </div>
             <span><?php _e('przed bydynkiem', 'gate') ?></span>
         </div>
-        <div class="numbers-tile numbers-tile--half">
+        <!-- <div class="numbers-tile numbers-tile--half">
             <div class="numbers-tile numbers-tile--grey">
                 <div class="title">5</div>
-                <span><?php _e('kondygnacji', 'gate') ?></span>
+                <span><?php #_e('kondygnacji', 'gate') ?></span>
             </div>
             <div class="numbers-tile numbers-tile--grey">
                 <div class="title">6</div>
-                <span><?php _e('wind osobowych', 'gate') ?></span>
+                <span><?php #_e('wind osobowych', 'gate') ?></span>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="numbers-content">
         <h2><?php _e('Fakty<br>i liczby', 'gate') ?></h2>

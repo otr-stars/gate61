@@ -13,7 +13,7 @@
     </div>
     <div class="met-content">
         <p>
-            Funkcjonalny, dostosowany do potrzeb, pracowników i biznesu, w pobliżu Lotniska Chopina i Centrum Okęcie Park. Zmodernizowane budynek, stworzony do do wygodnej pracy i relaksu w otoczeniu zieleni.
+            Funkcjonalny, zlokalizowany u zbiegu najważniejszych szlaków komunikacyjnych i punktów usługowych. Zmodernizowany i dostosowany do bieżących potrzeb pracowników i biznesu, w sąsiedztwie Portu Lotniczego im.Fryderyka Chopina i przy centrum handlowe Okęcie Park.
             <strong>zapraszamy na pokład</strong>
         </p>
         <a href="#contact" class="met-contact btn btn-primary--red">napisz do nas</a>
