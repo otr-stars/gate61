@@ -22,6 +22,14 @@ function initMenu() {
         $menu.classList.toggle('is-active');
         $body.classList.toggle('no-scroll');
     });
+
+    document.querySelectorAll("header .header-menu a").forEach(el => {
+      el.addEventListener("click", function () {
+        $mobileButton.classList.remove('is-active');
+        $menu.classList.remove('is-active');
+        $body.classList.remove('no-scroll');
+      });
+    });
 }
 
 function adventagesSlider() {

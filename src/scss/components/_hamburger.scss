@@ -60,7 +60,7 @@
             transition-timing-function: ease;
             transition-duration: 0.15s;
             transition-property: transform;
-            background-color: var(--color-black);
+            background-color: var(--color-black-light);
         }
 
         &:after {
@@ -78,7 +78,7 @@
         .hamburger {
 
             &-inner {
-                background-color: var(--color-red);
+                background-color: var(--color-black-light);
                 width: 38px;
                 transition-delay: 0.12s;
                 transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -86,7 +86,7 @@
 
                 &:after,
                 &:before {
-                    background-color: var(--color-red);
+                    background-color: var(--color-black-light);
                     width: 38px;
                 }
                 

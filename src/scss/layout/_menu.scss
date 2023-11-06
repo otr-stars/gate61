@@ -39,14 +39,12 @@
     .menu {
 
         &-language {
-            font-size: clamp(25px, vws(35px), 35px);
+            font-size: clamp(26px, vws(30px), 30px);
             width: fit-content;
             width: -moz-fit-content;
             height: fit-content;
             height: -moz-fit-content;
-            margin: 0 auto;
-            position: absolute;
-            bottom: 30px;
+            margin-left: auto;
         }
     }
 }
