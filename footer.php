@@ -11,7 +11,7 @@
     ?>
     <div class="footer-copyrights">
         <span><?php _e('2023 All rights reserved', 'gate'); ?></span>
-        <span><?php _e('Designed by E1 Collective', 'gate'); ?></span>
+        <span><a href="https://e1collective.pl/"><?php _e('Designed by E1 Collective', 'gate'); ?></a></span>
     </div>
 </div>
 <?php wp_footer(); ?>

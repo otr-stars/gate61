@@ -6,6 +6,10 @@ import {
 } from './js/libs/misc';
 import InterfaceLazyLoad from './js/libs/InterfaceLazyLoad';
 import Swiper, { Pagination } from 'swiper';
+import csTabs from './js/libs/csTabs';
+
+import pZooms from './js/f-panzoom.js';
+import pZoomsH from './js/f-panzoom-horizontal.js';
 
 
 function initMenu() {
@@ -128,6 +132,7 @@ function levelsSlider() {
 
 const csapp = new CsApp();
 csapp.addPlugin('lazyLoad', new InterfaceLazyLoad(csapp));
+csapp.pZooms = pZooms;
 
 csapp.addAction("domScripts", adventagesSlider);
 csapp.addAction("domScripts", modernizationSlider);
@@ -137,5 +142,8 @@ csapp.addAction("domScripts", levelsSlider);
 
 docReady(() => {
     csapp.ready();
+    pZooms.init();
+		pZoomsH.init();
+    csTabs(csapp);
     initMenu();
 });

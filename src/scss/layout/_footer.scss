@@ -50,6 +50,14 @@
                 margin-right: vw(265px);
             }
         }
+
+        a {
+            color: var(--color-white);
+
+            &:hover {
+                color: #c13e28;
+            }
+        }
     }
 }
 
