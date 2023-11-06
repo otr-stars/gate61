@@ -77,6 +77,7 @@
 
 @media(max-width: 991px) {
     .modernization {
+        margin-bottom: 100px;
 
         &::before {
             width: 550px;
@@ -96,6 +97,7 @@
 
             &-slide {
                 margin-bottom: 35px;
+                border-radius: clamp(38px, vws(43px), 43px);
                 
                 span {
                     background-color: transparent;
@@ -117,20 +119,40 @@
     }
 }
 
-@media(max-width: 575px) {
+@media(max-width: 767px) {
     .modernization {
         padding: 50px 0 50px 20px;
+
+        &::before {
+            width: 100%;
+            max-width: initial;
+            border-radius: 0;
+        }
 
         &-title {
             padding-right: 20px;
         }
 
         &-content {
-            width: calc(100% - 10px);
+            max-width: initial;
+            width: 100%;
+
+            h3 {
+                padding-right: 55px;
+            }
+
+            p {
+                padding-right: 65px;
+            }
         }
 
         .swiper {
             margin-left: -10px;
+
+            span {
+                opacity: 1;
+                left: 5px;
+            }
         }
     }
 }

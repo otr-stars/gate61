@@ -57,7 +57,7 @@ function modernizationSlider() {
           slidesPerView: 1.075,
           spaceBetween: 10,
         },
-        576: {
+        768: {
           slidesPerView: 1.38,
           spaceBetween: 10,
         },

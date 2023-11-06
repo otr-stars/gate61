@@ -42,6 +42,10 @@
             display: flex;
             justify-content: space-between;
             padding: 0;
+
+            .numbers-tile {
+                margin-bottom: 0;
+            }
         }
 
         .title {
@@ -110,6 +114,7 @@
 
         &-tile {
             width: calc(50% - 3.5px);
+            height: clamp(100px, vws(158px), 158px);
         }
 
         &-content {

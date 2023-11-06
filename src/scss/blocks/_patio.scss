@@ -1,7 +1,7 @@
 .patio {
     position: relative;
     padding: clamp(35px, vw(95px), 95px) 0 0 clamp(10px, vw(80px), 80px);
-    margin-bottom: clamp(65px, vw(135px), 135px);
+    margin-bottom: clamp(120px, vw(135px), 135px);
 
     &::before {
         z-index: -1;
@@ -52,20 +52,14 @@
 
 @media(max-width: 767px) {
     .patio {
-        padding: 0 0 35px 10px;
-        margin-bottom: 65px;
+        padding: 0 0 0 10px;
 
         &::before {
-            top: initial;
-            bottom: 0;
-            width: 80.56%;
-            height: vws(825px);
-            max-height: 600px;
+            display: none;
         }
 
         &-content {
             width: 100%;
-            max-width: 360px;
             margin-right: 0;
     
             h2 {
