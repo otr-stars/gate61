@@ -79,7 +79,7 @@
         .buttons {
             position: absolute;
             bottom: 35px;
-            right: 40px;
+            right: vw(40px);
 
             button {
                 display: flex;
@@ -161,6 +161,13 @@
 
         &-wrapper {
             min-height: clamp(400px, vws(485px), 485px);
+        }
+
+        &-item {
+
+            .buttons {
+                right: clamp(15px, vws(25px), 25px);
+            }
         }
     }
 }
