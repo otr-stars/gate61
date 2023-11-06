@@ -17,7 +17,7 @@
                 'container' => '',
                 'items_wrap' => '<ul id="%1$s">%3$s</ul>',
             )); ?>
-            <a href="#language" class="menu-language">En</a>
+            <?php #<a href="#language" class="menu-language">En</a> ?>
         </div>
         <div class="hamburger">
             <div class="hamburger-box">
