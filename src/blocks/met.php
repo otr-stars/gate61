@@ -13,9 +13,9 @@
     </div>
     <div class="met-content">
         <p>
-            Funkcjonalny, dostosowany do potrzeb, pracowników i biznesu, w pobliżu Lotniska Chopina i Centrum Okęcie Park. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin sit amet dignissim tellus.
-            <strong><?php _e('Zapraszamy na pokład!', 'gate')?></strong>
+            Funkcjonalny, dostosowany do potrzeb, pracowników i biznesu, w pobliżu Lotniska Chopina i Centrum Okęcie Park. Zmodernizowane budynek, stworzony do do wygodnej pracy i relaksu w otoczeniu zieleni.
+            <strong>zapraszamy na pokład</strong>
         </p>
-        <a href="#contact" class="met-contact btn btn-primary--red"><?php _e('Napisz do nas', 'gate') ?></a>
+        <a href="#contact" class="met-contact btn btn-primary--red">napisz do nas</a>
     </div>
 </div>

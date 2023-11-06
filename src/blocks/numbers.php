@@ -39,6 +39,6 @@
     </div>
     <div class="numbers-content">
         <h2><?php _e('Fakty<br>i liczby', 'gate') ?></h2>
-        <p><?php _e('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet rhoncus justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin sit amet dignissim tellus.', 'gate') ?></p>
+        <p>Kompaktowy budynek biurowy z wieloma udogodnieniami w środku i na zewnątrz.</p>
     </div>
 </div>
