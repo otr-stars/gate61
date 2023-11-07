@@ -1,7 +1,7 @@
 <div id="standard" class="standard">
-    <h2 class="standard-title"><?php _e('Standard <br>techniczny <br>budynku', 'gate') ?></h2>
+    <h2 class="standard-title"><?php _e('standard <br>techniczny <br>budynku', 'gate') ?></h2>
     <div class="standard-wrapper">
-        <div class="standard-img" style="background-image: url('<?= wp_get_attachment_image_src(64, 'full')[0] ?>');"></div>
+        <div class="standard-img" style="background-image: url('<?= wp_get_attachment_image_src(84, 'full')[0] ?>');"></div>
         <ul class="standard-list">
             <li class="standard-item standard-item--1">
                 <div class="icon icon-vent"></div>

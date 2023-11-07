@@ -1,5 +1,5 @@
 <div id="location" class="location tabs">
-    <h2 class="location-title"><?php _e('Lokalizacja i udogodnienia', 'gate') ?></h2>
+    <h2 class="location-title"><?php _e('lokalizacja i udogodnienia', 'gate') ?></h2>
     <div class="location-wrapper">
         <div class="location-text">
             <p>
@@ -10,15 +10,15 @@
             </p>
         </div>
         <nav class="location-nav tabs-nav js-tab">
-            <button class="btn btn-outline--red tabs-item active" data-target="location_map"><?php _e('Mapa', 'gate') ?></button>
-            <button class="btn btn-outline--red tabs-item" data-target="facilities"><?php _e('Udogodnienia', 'gate') ?></button>
+            <button class="btn btn-outline--red tabs-item active" data-target="location_map"><?php _e('mapa', 'gate') ?></button>
+            <button class="btn btn-outline--red tabs-item" data-target="facilities"><?php _e('udogodnienia', 'gate') ?></button>
         </nav>
         <div class="location-map">
             <div id="location_map" class="location-item active">
-                <img src="<?= wp_get_attachment_image_src(69, 'full')[0] ?>">
+                <img src="<?= wp_get_attachment_image_src(72, 'full')[0] ?>">
             </div>
             <div id="facilities" class="location-item">
-                <img src="<?= wp_get_attachment_image_src(69, 'full')[0] ?>">
+                <img src="<?= wp_get_attachment_image_src(71, 'full')[0] ?>">
             </div>
         </div>
         <div class="location-buttons">

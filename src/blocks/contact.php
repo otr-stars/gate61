@@ -1,14 +1,14 @@
 <div class="contact">
     <div class="contact-wrapper">
         <div class="contact-title">
-            <h2><?php _e('Bądźmy w kontakcie', 'gate') ?></h2>
+            <h2><?php _e('bądźmy w kontakcie', 'gate') ?></h2>
             <img src="<?= wp_get_attachment_image_src(61, 'full')[0] ?>">
         </div>
         <div class="contact-list">
             <div class="contact-person">
                 <div class="img" style="background-image: url('<?= wp_get_attachment_image_src(62, 'full')[0] ?>');"></div>
                 <div class="content">
-                    <h3 class="name">Monika Orłowska</h3>
+                    <h3 class="name">monika orłowska</h3>
                     <p class="position"><?php _e('Senior Associate Office Landlord Reperesentation', 'gate') ?></p>
                     <a href="tel:+48 734 217 547" class="phone">+48 734 217 547</a>
                     <a href="mailto:monika.orlowska@colliers.com" class="mail">monika.orlowska@colliers.com</a>
@@ -17,7 +17,7 @@
             <div class="contact-person">
                 <div class="img" style="background-image: url('<?= wp_get_attachment_image_src(60, 'full')[0] ?>');"></div>
                 <div class="content">
-                    <h3 class="name">Piotr Komadowski</h3>
+                    <h3 class="name">piotr komadowski</h3>
                     <p class="position"><?php _e('Senior Associate Office Landlord Representation', 'gate') ?></p>
                     <a href="tel:+48 664 920 820" class="phone">+48 664 920 820</a>
                     <a href="mailto:piotr.komadowski@colliers.com " class="mail">piotr.komadowski@colliers.com </a>
@@ -27,7 +27,7 @@
     </div>
     <div class="contact-info">
         <div class="contact-landlord">
-            <h3 class="title"><?php _e('Właściciel budynku', 'gate') ?></h3>
+            <h3 class="title"><?php _e('właściciel budynku', 'gate') ?></h3>
             <p class="address">
                 Okęcie Park Sp. z o.o.<br>
                 ul. Twarda 18<br>
@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class="contact-form" id="contact" >
-        <h2 class="title"><?php _e('Napisz <br>do nas', 'gate') ?></h2>
+        <h2 class="title"><?php _e('napisz <br>do nas', 'gate') ?></h2>
         <?= do_shortcode('[contact-form-7 id="63" title="Contact form PL"]') ?>
     </div>
 </div>
