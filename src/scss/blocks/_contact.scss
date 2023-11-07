@@ -172,6 +172,46 @@
             padding-right: clamp(135px, vw(180px), 180px);
             margin-right: vw(80px);
 
+            input[type="checkbox"] {
+                width: 0px;
+                height: 0px;
+                position: relative;
+                margin: 13px;
+                margin-right: 22px;
+
+                &::after, &::before {
+                    position: absolute;
+                    display: block;
+                }
+
+                &::after {
+                    font-family: 'icomoon';
+                    content: "\e90b";
+                    font-size: 12px;
+                    top: -5.5px;
+                    left: -5.5px;
+                    opacity: 0;
+                    transition: opacity 0.4s ease;
+                }
+
+                &::before {
+                    top: -13px;
+                    left: -13px;
+                    width: 23px;
+                    height: 23px;
+                    content: "";
+                    border-radius: 50%;
+                    border: 2px solid var(--color-black-light);
+                }
+
+                &:checked {
+
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+
             input[type="submit"] {
                 position: absolute;
                 bottom: 75px;
