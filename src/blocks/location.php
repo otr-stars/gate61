@@ -22,8 +22,8 @@
             </div>
         </div>
         <div class="location-buttons">
-            <button class="btn btn-primary">+</button>
-            <button class="btn btn-primary">-</button>
+            <button class="btn btn-primary"><i class="icon icon-plus"></i></button>
+            <button class="btn btn-primary"><i class="icon icon-minus"></i></button>
         </div>
     </div>
 </div>

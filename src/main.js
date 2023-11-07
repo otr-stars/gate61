@@ -5,7 +5,7 @@ import {
     docReady,
 } from './js/libs/misc';
 import InterfaceLazyLoad from './js/libs/InterfaceLazyLoad';
-import Swiper, { Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 import csTabs from './js/libs/csTabs';
 
 import pZooms from './js/f-panzoom.js';
@@ -33,31 +33,37 @@ function initMenu() {
 }
 
 function adventagesSlider() {
-    const swiperAdventages = document.querySelector(".swiper--adventages");
-    if (!swiperAdventages) return;
-    new Swiper(".swiper--adventages", {
-      slidesPerView: 2.15,
-      spaceBetween: 20,
-        breakpoints: {
-          320: {
-            slidesPerView: 1.07,
-            spaceBetween: 10,
-          },
-          576: {
-            slidesPerView: 2.15,
-            spaceBetween: 10,
-          },
-          992: {
-            spaceBetween: 20,
-          },
-        },
-    });
+  const swiperAdventages = document.querySelector(".swiper--adventages");
+  if (!swiperAdventages) return;
+  new Swiper(".swiper--adventages", {
+    modules: [Navigation],
+    slidesPerView: 2.15,
+    spaceBetween: 20,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.07,
+        spaceBetween: 10,
+      },
+      576: {
+        slidesPerView: 2.15,
+        spaceBetween: 10,
+      },
+      992: {
+        spaceBetween: 20,
+      },
+    },
+    navigation: {
+      prevEl: ".swiper-prev",
+      nextEl: ".swiper-next",
+    },
+  });
 }
 
 function modernizationSlider() {
   const swiperModernization = document.querySelector(".swiper--modernization");
   if (!swiperModernization) return;
   new Swiper(".swiper--modernization", {
+    modules: [Navigation],
     slidesPerView: 1.38,
     spaceBetween: 20,
       breakpoints: {
@@ -73,6 +79,10 @@ function modernizationSlider() {
           spaceBetween: 20,
         },
       },
+      navigation: {
+        prevEl: ".swiper-prev",
+        nextEl: ".swiper-next",
+      },
   });
 }
 
@@ -80,6 +90,7 @@ function patioSlider() {
   const swiperPatio = document.querySelector(".swiper--patio");
   if (!swiperPatio) return;
   new Swiper(".swiper--patio", {
+    modules: [Navigation],
     slidesPerView: 1.05,
     spaceBetween: 20,
       breakpoints: {
@@ -95,6 +106,10 @@ function patioSlider() {
           spaceBetween: 20,
         },
       },
+      navigation: {
+        prevEl: ".swiper-prev",
+        nextEl: ".swiper-next",
+      },
   });
 }
 
@@ -102,21 +117,26 @@ function gallerySlider() {
   const swiperGallery = document.querySelector(".swiper--gallery");
   if (!swiperGallery) return;
   new Swiper(".swiper--gallery", {
+    modules: [Navigation],
     slidesPerView: 1.6,
     spaceBetween: 25,
-      breakpoints: {
-        320: {
-          slidesPerView: 1.075,
-          spaceBetween: 10,
-        },
-        768: {
-          slidesPerView: 1.06,
-          spaceBetween: 10,
-        },
-        992: {
-          spaceBetween: 25,
-        },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.075,
+        spaceBetween: 10,
       },
+      768: {
+        slidesPerView: 1.06,
+        spaceBetween: 10,
+      },
+      992: {
+        spaceBetween: 25,
+      },
+    },
+    navigation: {
+      prevEl: ".swiper-prev",
+      nextEl: ".swiper-next",
+    },
   });
 }
 

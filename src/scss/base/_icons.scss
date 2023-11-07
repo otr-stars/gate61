@@ -25,6 +25,26 @@
     -moz-osx-font-smoothing: grayscale;
 }
   
+.icon-circle_arrow_left:before {
+    content: "\e900";
+}
+
+.icon-circle_arrow_right:before {
+    content: "\e907";
+}
+
+.icon-minus:before {
+    content: "\e908";
+}
+
+.icon-plus:before {
+    content: "\e90a";
+}
+
+.icon-checkmark:before {
+    content: "\e90b";
+}
+
 .icon-lock:before {
     content: "\e901";
 }

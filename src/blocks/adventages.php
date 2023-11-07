@@ -57,6 +57,8 @@
                 </div>
             </div>
         </div>
+        <div class="swiper-prev icon icon-circle_arrow_left"></div>
+        <div class="swiper-next icon icon-circle_arrow_right"></div>
     </div>
 
 </div>

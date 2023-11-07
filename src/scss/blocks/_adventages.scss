@@ -24,6 +24,8 @@
     }
 
     .swiper {
+        display: flex;
+        align-items: center;
         padding: 0 clamp(10px, vw(185px), 185px);
 
         &-slide {
@@ -84,6 +86,35 @@
                 margin-bottom: 0;
             }
         }
+
+        &-prev, &-next {
+            z-index: 2;
+            position: absolute;
+            font-size: 46px;
+            color: var(--color-white);
+            transition: color 0.4s ease, opacity 0.4s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--color-red);
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &-prev {
+            left: 45px;
+        }
+
+        &-next {
+            right: 45px;
+        }
+
+        &-button-disabled {
+            opacity: 0;
+        }
     }
 }
 
@@ -94,6 +125,10 @@
 
         .swiper {
             padding: 0 clamp(10px, vws(45px), 45px);
+
+            &-prev, &-next {
+                display: none;
+            }
         }
     }
 }

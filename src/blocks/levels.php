@@ -28,8 +28,8 @@
                 <img src="<?= wp_get_attachment_image_src(68, 'full')[0] ?>"></img>
             </div>
             <div class="buttons">
-                <button class="btn btn-primary">+</button>
-                <button class="btn btn-primary">-</button>
+                <button class="btn btn-primary"><i class="icon icon-plus"></i></button>
+                <button class="btn btn-primary"><i class="icon icon-minus"></i></button>
             </div>
         </div>
 
@@ -55,8 +55,8 @@
                 <img src="<?= wp_get_attachment_image_src(70, 'full')[0] ?>"></img>
             </div>
             <div class="buttons">
-                <button class="">+</button>
-                <button class="">-</button>
+                <button class="btn btn-primary"><i class="icon icon-plus"></i></button>
+                <button class="btn btn-primary"><i class="icon icon-minus"></i></button>
             </div>
         </div>
 
@@ -82,8 +82,8 @@
                 <img src="<?= wp_get_attachment_image_src(66, 'full')[0] ?>"></img>
             </div>
             <div class="buttons">
-                <button class="">+</button>
-                <button class="">-</button>
+                <button class="btn btn-primary"><i class="icon icon-plus"></i></button>
+                <button class="btn btn-primary"><i class="icon icon-minus"></i></button>
             </div>
         </div>
     </div>

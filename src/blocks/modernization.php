@@ -28,6 +28,8 @@
                     <span><?php _e('nowy standard kuchni i toalet', 'gate') ?></span>
                 </div>
             </div>
+            <div class="swiper-prev icon icon-circle_arrow_left"></div>
+            <div class="swiper-next icon icon-circle_arrow_right"></div>
         </div>
     </div>
 </div>

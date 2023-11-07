@@ -37,6 +37,8 @@
     }
 
     .swiper {
+        display: flex;
+        align-items: center;
         flex: 1;
         padding-right: clamp(10px, vw(80px), 80px);
 
@@ -46,6 +48,49 @@
             border-radius: 43px;
             background-position: center;
             background-size: cover;
+        }
+
+        &-prev, &-next {
+            z-index: 2;
+            position: absolute;
+            font-size: 46px;
+            color: var(--color-white);
+            transition: color 0.4s ease, opacity 0.4s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--color-red);
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &-prev {
+            left: 45px;
+        }
+
+        &-next {
+            right: 45px;
+        }
+
+        &-button-disabled {
+            opacity: 0;
+        }
+    }
+}
+
+
+
+@media(max-width: 991px) {
+    .patio {
+
+        .swiper {
+
+            &-prev, &-next {
+                display: none;
+            }
         }
     }
 }
