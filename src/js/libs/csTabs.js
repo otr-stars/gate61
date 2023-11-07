@@ -16,13 +16,7 @@ export default function csTabs(csApp) {
                 if ($target) {
                     $target.classList.add('active');
                     e.target.classList.add('active');
-                    // const map = $target.querySelector('.map');
-                    // if (map) {
-                        //csApp.plugins['CsMaps'].resetMap(map.id);
-                        //csApp.plugins['CsMaps'].updateMaps();
-						//pZooms.updateAll();
-						csApp.pZooms.updateAll();
-                    // }
+                    csApp.pZooms.updateAll();
 
                 }
             }

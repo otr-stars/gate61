@@ -14,16 +14,24 @@
             <button class="btn btn-outline--red tabs-item" data-target="facilities"><?php _e('udogodnienia', 'gate') ?></button>
         </nav>
         <div class="location-map">
-            <div id="location_map" class="location-item active">
-                <img src="<?= wp_get_attachment_image_src(72, 'full')[0] ?>">
+            <div id="location_map" class="location-item zoom-container active">
+                <div class="zoom-wrapper">
+                    <img src="<?= wp_get_attachment_image_src(72, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+                </div>
+                <div class="location-buttons">
+                    <button class="btn btn-primary zoom-in"><i class="icon icon-plus"></i></button>
+                    <button class="btn btn-primary zoom-out"><i class="icon icon-minus"></i></button>
+                </div>
             </div>
-            <div id="facilities" class="location-item">
-                <img src="<?= wp_get_attachment_image_src(71, 'full')[0] ?>">
+            <div id="facilities" class="location-item zoom-container">
+                <div class="zoom-wrapper">
+                    <img src="<?= wp_get_attachment_image_src(71, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+                </div>
+                <div class="location-buttons">
+                    <button class="btn btn-primary zoom-in"><i class="icon icon-plus"></i></button>
+                    <button class="btn btn-primary zoom-out"><i class="icon icon-minus"></i></button>
+                </div>
             </div>
-        </div>
-        <div class="location-buttons">
-            <button class="btn btn-primary"><i class="icon icon-plus"></i></button>
-            <button class="btn btn-primary"><i class="icon icon-minus"></i></button>
         </div>
     </div>
 </div>
