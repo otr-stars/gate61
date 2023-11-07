@@ -1,4 +1,4 @@
-<div id="contact" class="contact">
+<div class="contact">
     <div class="contact-wrapper">
         <div class="contact-title">
             <h2><?php _e('Bądźmy w kontakcie', 'gate') ?></h2>
@@ -50,7 +50,7 @@
             <a class="link" href="mailto:kontakt@gate61.pl" target="_blank">kontakt@gate61.cpl</a>
         </div>
     </div>
-    <div class="contact-form">
+    <div class="contact-form" id="contact" >
         <h2 class="title"><?php _e('Napisz <br>do nas', 'gate') ?></h2>
         <?= do_shortcode('[contact-form-7 id="63" title="Contact form PL"]') ?>
     </div>
