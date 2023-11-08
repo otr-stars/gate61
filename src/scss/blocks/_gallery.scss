@@ -8,6 +8,9 @@
 
     .swiper {
         padding: 0 clamp(10px, vw(80px), 80px);
+        align-items: center;
+        display: flex;
+        flex: 1;
 
         &-slide {
             aspect-ratio: 13 / 10;
@@ -15,6 +18,36 @@
             border-radius: clamp(18px, vw(43px), 43px);
             background-position: center;
             background-size: cover;
+        }
+
+        &-prev,
+        &-next {
+            z-index: 2;
+            position: absolute;
+            font-size: 46px;
+            color: var(--color-white);
+            transition: color 0.4s ease, opacity 0.4s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--color-red);
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &-prev {
+            left: 90px;
+        }
+
+        &-next {
+            right: 45px;
+        }
+
+        &-button-disabled {
+            opacity: 0;
         }
     }
 }
@@ -30,10 +63,17 @@
 
         .swiper {
             padding: 0 10px;
-    
+
             &-slide {
                 border-radius: 18px;
+
             }
+
+            &-prev,
+            &-next {
+                display: none;
+            }
+
         }
     }
 }
