@@ -55,7 +55,7 @@
             </div>
             <div class="map">
                 <div class="zoom-wrapper">
-                    <img src="<?= wp_get_attachment_image_src(67, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+                    <img src="<?= wp_get_attachment_image_src(95, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
                 </div>
             </div>
             <div class="buttons">

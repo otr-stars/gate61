@@ -16,7 +16,7 @@
         <div class="location-map">
             <div id="location_map" class="location-item zoom-container active">
                 <div class="zoom-wrapper">
-                    <img src="<?= wp_get_attachment_image_src(72, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+                    <img src="<?= wp_get_attachment_image_src(93, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
                 </div>
                 <div class="location-buttons">
                     <button class="btn btn-primary zoom-in"><i class="icon icon-plus"></i></button>
@@ -25,7 +25,7 @@
             </div>
             <div id="facilities" class="location-item zoom-container">
                 <div class="zoom-wrapper">
-                    <img src="<?= wp_get_attachment_image_src(71, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+                    <img src="<?= wp_get_attachment_image_src(94, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
                 </div>
                 <div class="location-buttons">
                     <button class="btn btn-primary zoom-in"><i class="icon icon-plus"></i></button>

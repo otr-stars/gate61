@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title><?php is_home() ? bloginfo('description') : wp_title('|', true, 'right'); ?></title>
     <?php wp_head(); ?>
+    <link rel="preload" href="/wp-content/themes/gate61/fonts/HelveticaNowProTextRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/wp-content/themes/gate61/fonts/NorthlaneOne.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/wp-content/themes/gate61/fonts/HelveticaNowProTextRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body <?php body_class(); ?>>
