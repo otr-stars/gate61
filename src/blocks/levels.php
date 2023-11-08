@@ -6,7 +6,7 @@
         <button class="btn btn-outline tabs-item" data-target="level_5"><?php _e('Piętro 5', 'gate') ?></button>
     </nav>
     <div class="levels-wrapper">
-        <div id="level_3_1" class="levels-item zoom-container active">
+        <div id="level_3_1" class="levels-item panzoom active">
             <div class="levels-header">
                 <h3><?php _e('Piętro 3', 'gate') ?></h3>
                 <ul>
@@ -24,18 +24,24 @@
                     </li>
                 </ul>
             </div>
-            <div class="map">
-                <div class="zoom-wrapper">
-                    <img src="<?= wp_get_attachment_image_src(68, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+            <div class="level-container ">
+                <div>
+                    <div class="map" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+                        <div class="map-wrapper">
+                            <div class="map-layer">
+                                <img src="<?= wp_get_attachment_image_src(68, 'full')[0] ?>" class="map-img">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="buttons">
+            <div class="location-buttons">
                 <button class="btn btn-primary zoom-in"><i class="icon icon-plus"></i></button>
                 <button class="btn btn-primary zoom-out"><i class="icon icon-minus"></i></button>
             </div>
         </div>
 
-        <div id="level_3_2" class="levels-item zoom-container">
+        <div id="level_3_2" class="levels-item panzoom">
             <div class="levels-header">
                 <h3><?php _e('Piętro 3', 'gate') ?></h3>
                 <ul>
@@ -53,18 +59,24 @@
                     </li>
                 </ul>
             </div>
-            <div class="map">
-                <div class="zoom-wrapper">
-                    <img src="<?= wp_get_attachment_image_src(95, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+            <div class="level-container">
+                <div>
+                    <div class="map" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+                        <div class="map-wrapper">
+                            <div class="map-layer">
+                                <img src="<?= wp_get_attachment_image_src(95, 'full')[0] ?>" class="map-img">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="buttons">
+            <div class="location-buttons">
                 <button class="btn btn-primary zoom-in"><i class="icon icon-plus"></i></button>
                 <button class="btn btn-primary zoom-out"><i class="icon icon-minus"></i></button>
             </div>
         </div>
 
-        <div id="level_5" class="levels-item zoom-container">
+        <div id="level_5" class="levels-item panzoom">
             <div class="levels-header">
                 <h3><?php _e('Piętro 5', 'gate') ?></h3>
                 <ul>
@@ -82,12 +94,18 @@
                     </li>
                 </ul>
             </div>
-            <div class="map">
-                <div class="zoom-wrapper">
-                    <img src="<?= wp_get_attachment_image_src(66, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+            <div class="level-container">
+                <div>
+                    <div class="map" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+                        <div class="map-wrapper">
+                            <div class="map-layer">
+                                <img src="<?= wp_get_attachment_image_src(66, 'full')[0] ?>" class="map-img">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="buttons">
+            <div class="location-buttons">
                 <button class="btn btn-primary zoom-in"><i class="icon icon-plus"></i></button>
                 <button class="btn btn-primary zoom-out"><i class="icon icon-minus"></i></button>
             </div>

@@ -22,7 +22,7 @@ export default function csTabs(csApp) {
             }
         });
     });
-	setTimeout(function() {
-		csApp.pZooms.updateAll();
-	},300);	
+    setTimeout(function () {
+        csApp.pZooms.updateAll();
+    }, 300);
 }

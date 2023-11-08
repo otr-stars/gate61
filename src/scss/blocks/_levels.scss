@@ -38,7 +38,8 @@
     &-wrapper {
         position: relative;
         width: 100%;
-        aspect-ratio: 2 / 1;
+        // aspect-ratio: 2 / 1;
+        height: 77vh;
         min-height: 485px;
         background-color: var(--color-grey);
         border-radius: 58px;
@@ -54,32 +55,38 @@
         padding: clamp(35px, vw(45px), 45px) clamp(15px, vw(55px), 55px) clamp(35px, vw(45px), 45px) clamp(20px, vw(55px), 55px);
         z-index: -2;
         opacity: 0;
-        transition: opacity 0.8s ease;
+        // transition: opacity 0.8s ease;
 
         &.active {
             z-index: 2;
             opacity: 1;
         }
 
-        .map {
+        .level-container {
             position: relative;
-            width: 100%;
-            aspect-ratio: 5 / 1.85;
+            // width: 1440px;
+            height: 0;
+            padding-top: 33.33%;
+            margin: auto;
 
-            img {
+            >div {
                 position: absolute;
+                width: 100%;
                 height: 100%;
-                width: auto;
-                max-width: initial;
-            }
-        }
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow: hidden;
 
-        .zoom-wrapper {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+                img {
+                    max-height: 300px;
+                }
+            }
+
+            .map {
+                position: initial;
+            }
         }
 
         .buttons {
@@ -156,7 +163,7 @@
         }
 
         &-nav {
-            
+
             margin-bottom: 20px;
 
             .btn {
@@ -171,7 +178,16 @@
 
         &-item {
 
+
+
+            .location-buttons {
+                position: initial;
+                padding-top: 30px;
+                justify-content: flex-end;
+            }
+
             .buttons {
+
                 right: clamp(15px, vws(25px), 25px);
             }
         }
@@ -238,12 +254,21 @@
                 height: -moz-fit-content;
             }
 
+            .level-container {
+                padding-top: 100%;
+                // &>div{
+                //     img{
+                //         max-height: 100%;
+                //     }
+                // }
+            }
+
             .buttons {
                 position: initial;
                 display: flex;
                 justify-content: end;
                 margin-top: 10px;
-    
+
                 button {
                     margin-right: 10px;
                     margin-bottom: 0;

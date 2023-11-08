@@ -14,22 +14,26 @@
             <button class="btn btn-outline--red tabs-item" data-target="facilities"><?php _e('udogodnienia', 'gate') ?></button>
         </nav>
         <div class="location-map">
-            <div id="location_map" class="location-item zoom-container active">
-                <div class="zoom-wrapper">
-                    <img src="<?= wp_get_attachment_image_src(93, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+            <div id="location_map" class="location-item zoom-container panzoom active">
+                <div class="map" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+                    <div class="map-wrapper">
+                        <div class="map-layer">
+                            <img src="<?= wp_get_attachment_image_src(93, 'full')[0] ?>" class="map-img">
+                        </div>
+                    </div>
                 </div>
                 <div class="location-buttons">
                     <button class="btn btn-primary zoom-in"><i class="icon icon-plus"></i></button>
                     <button class="btn btn-primary zoom-out"><i class="icon icon-minus"></i></button>
                 </div>
             </div>
-            <div id="facilities" class="location-item zoom-container">
-                <div class="zoom-wrapper">
-                    <img src="<?= wp_get_attachment_image_src(94, 'full')[0] ?>" class="zoom-img" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
-                </div>
-                <div class="location-buttons">
-                    <button class="btn btn-primary zoom-in"><i class="icon icon-plus"></i></button>
-                    <button class="btn btn-primary zoom-out"><i class="icon icon-minus"></i></button>
+            <div id="facilities" class="location-item zoom-container panzoom">
+                <div class="map" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
+                    <div class="map-wrapper">
+                        <div class="map-layer">
+                            <img src="<?= wp_get_attachment_image_src(94, 'full')[0] ?>" class="map-img">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
