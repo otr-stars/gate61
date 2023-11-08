@@ -53,8 +53,8 @@ function adventagesSlider() {
       },
     },
     navigation: {
-      prevEl: ".swiper-prev",
-      nextEl: ".swiper-next",
+      prevEl: ".swiper--adventages .swiper-prev",
+      nextEl: ".swiper--adventages .swiper-next",
     },
   });
 }
@@ -80,8 +80,8 @@ function modernizationSlider() {
         },
       },
       navigation: {
-        prevEl: ".swiper-prev",
-        nextEl: ".swiper-next",
+        prevEl: ".swiper--modernization .swiper-prev",
+        nextEl: ".swiper--modernization .swiper-next",
       },
   });
 }
@@ -107,8 +107,8 @@ function patioSlider() {
         },
       },
       navigation: {
-        prevEl: ".swiper-prev",
-        nextEl: ".swiper-next",
+        prevEl: ".swiper--patio .swiper-prev",
+        nextEl: ".swiper--patio .swiper-next",
       },
   });
 }
@@ -134,8 +134,8 @@ function gallerySlider() {
       },
     },
     navigation: {
-      prevEl: ".swiper-prev",
-      nextEl: ".swiper-next",
+      prevEl: ".swiper--gallery .swiper-prev",
+      nextEl: ".swiper--gallery .swiper-next",
     },
   });
 }
