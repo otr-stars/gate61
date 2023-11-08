@@ -11,16 +11,16 @@
                 <h3><?php _e('Piętro 3', 'gate') ?></h3>
                 <ul>
                     <li>
-                        <?php _e('powierzchnia netto: ', 'gate') ?>
-                        <span><?php _e('5654,45 sqm', 'gate') ?></span>
+                        <?php _e('Powierzchnia netto: ', 'gate') ?>
+                        <span><?php _e('5654,45 m²', 'gate') ?></span>
                     </li>
                     <li>
-                        <?php _e('powierzchnia brutto: ', 'gate') ?>
-                        <span><?php _e('6095,48 sqm', 'gate') ?></span>
+                        <?php _e('Powierzchnia brutto: ', 'gate') ?>
+                        <span><?php _e('5915.88 m²', 'gate') ?></span>
                     </li>
                     <li>
                         <?php _e('Dostępna powierzchnia: ', 'gate') ?>
-                        <span><?php _e('6095,48 sqm', 'gate') ?></span>
+                        <span><?php _e('', 'gate') ?></span>
                     </li>
                 </ul>
             </div>
@@ -40,16 +40,16 @@
                 <h3><?php _e('Piętro 3', 'gate') ?></h3>
                 <ul>
                     <li>
-                        <?php _e('powierzchnia netto: ', 'gate') ?>
-                        <span><?php _e('5654,45 sqm', 'gate') ?></span>
+                        <?php _e('Powierzchnia netto: ', 'gate') ?>
+                        <span><?php _e('5654,45 m²', 'gate') ?></span>
                     </li>
                     <li>
-                        <?php _e('powierzchnia brutto: ', 'gate') ?>
-                        <span><?php _e('6095,48 sqm', 'gate') ?></span>
+                        <?php _e('Powierzchnia brutto: ', 'gate') ?>
+                        <span><?php _e('5915.88 m²', 'gate') ?></span>
                     </li>
                     <li>
                         <?php _e('Dostępna powierzchnia: ', 'gate') ?>
-                        <span><?php _e('6095,48 sqm', 'gate') ?></span>
+                        <span><?php _e('', 'gate') ?></span>
                     </li>
                 </ul>
             </div>
@@ -69,16 +69,16 @@
                 <h3><?php _e('Piętro 5', 'gate') ?></h3>
                 <ul>
                     <li>
-                        <?php _e('powierzchnia netto: ', 'gate') ?>
-                        <span><?php _e('5654,45 sqm', 'gate') ?></span>
+                        <?php _e('Powierzchnia netto: ', 'gate') ?>
+                        <span><?php _e('3893,53 m²', 'gate') ?></span>
                     </li>
                     <li>
-                        <?php _e('powierzchnia brutto: ', 'gate') ?>
-                        <span><?php _e('6095,48 sqm', 'gate') ?></span>
+                        <?php _e('Powierzchnia brutto: ', 'gate') ?>
+                        <span><?php _e('4248.21 m²', 'gate') ?></span>
                     </li>
                     <li>
                         <?php _e('Dostępna powierzchnia: ', 'gate') ?>
-                        <span><?php _e('6095,48 sqm', 'gate') ?></span>
+                        <span><?php _e('', 'gate') ?></span>
                     </li>
                 </ul>
             </div>

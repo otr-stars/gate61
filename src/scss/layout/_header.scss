@@ -2,6 +2,7 @@
     position: relative;
     padding: 10px 20px;
     margin-bottom: clamp(15px, vw(60px), 60px);
+    width: 100%;
 
     &-logo {
         position: absolute;
@@ -18,7 +19,7 @@
             font-size: 17px;
             padding: 10px clamp(15px, vw(25px), 25px);
             color: var(--color-black);
-            
+
             &:hover {
                 color: var(--color-red);
             }
@@ -43,10 +44,11 @@
             position: absolute;
             top: 0;
             right: 0;
+            left: auto;
             width: calc(100vw - clamp(110px, vws(155px), 155px));
             height: 100vh;
             background-color: var(--color-grey);
-            padding:  180px 45px 100px;
+            padding: 180px 45px 100px;
             flex-wrap: wrap;
             align-content: space-between;
             border-radius: 58px 0 0 58px;
@@ -63,7 +65,7 @@
             li {
                 width: 100%;
                 text-align: center;
-                margin: 0 0 20px 0!important;
+                margin: 0 0 20px 0 !important;
                 opacity: 0;
                 position: relative;
                 left: 100vw;
@@ -91,7 +93,8 @@
 
                     @for $i from 1 through 6 {
                         &:nth-of-type(#{$i}) {
-                            transition: opacity 0.5s #{($i * 0.15) + 0.2}s ease, left 0.45s #{($i * 0.15) + 0.2}s ease;
+                            transition: opacity 0.5s #{($i * 0.15) + 0.2}s ease,
+                            left 0.45s #{($i * 0.15) + 0.2}s ease;
                         }
                     }
                 }

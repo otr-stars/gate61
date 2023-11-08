@@ -6,6 +6,7 @@ form {
     }
 
     input {
+        font-family: 'HelveticaNowProTextRegular';
         width: 100%;
         background-color: var(--color-white);
         border: 2px solid var(--color-black-light);
@@ -16,6 +17,7 @@ form {
     }
 
     textarea {
+        font-family: 'HelveticaNowProTextRegular';
         width: 100%;
         background-color: var(--color-white);
         border: 2px solid var(--color-black-light);
@@ -74,9 +76,9 @@ form {
         input {
             margin-bottom: 10px;
         }
-    
+
         .input {
-    
+
             &--half {
                 width: calc(50% - 5px);
             }

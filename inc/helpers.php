@@ -21,7 +21,7 @@ function cwt_the_logo(string $type, ?string $css = null): void
         echo '<a href="' . get_home_url() . '">' . get_bloginfo('name') . '</a>';
     } else {
         echo '<a href="' . get_home_url() . '"' . ((empty($css)) ? '' : ' class="' . $css . '"') . ' title="' . __('strona główna', 'gate') . '">' .
-            wp_get_attachment_image($attachment_id, 'full') . '</a>';
+            wp_get_attachment_image($attachment_id, 'full', null, ['loading'=>'none']) . '</a>';
     }
 }
 
