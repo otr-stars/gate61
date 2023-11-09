@@ -208,6 +208,7 @@
                     display: flex;
                     align-items: center;
                     position: relative;
+                    margin-left: -5px;
 
                     span {
                         flex: 1
@@ -225,7 +226,7 @@
                         opacity: 0;
                         transition: opacity .4s ease;
                         position: absolute;
-                        left: 8px;
+                        left: 7px;
                     }
 
                     &::before {
@@ -233,7 +234,9 @@
                         border-radius: 50%;
                         content: "";
                         height: 23px;
+                        min-height: 23px;
                         width: 23px;
+                        min-width: 23px;
                         display: block;
                         margin-right: 13px;
                     }
@@ -242,6 +245,13 @@
 
                 input[type="checkbox"]:checked+.wpcf7-list-item-label::after {
                     opacity: 1;
+                }
+            }
+
+            .wpcf7-acceptance {
+                
+                .wpcf7-list-item {
+                    margin-left: 0;
                 }
             }
         }

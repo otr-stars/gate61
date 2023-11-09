@@ -109,5 +109,7 @@
 @media(max-width: 991px) {
     .hamburger {
         display: flex;
+        margin-top: 10px;
+        transition: margin-top 0.4s ease;
     }
 }

@@ -7,6 +7,7 @@ import {
 import InterfaceLazyLoad from './js/libs/InterfaceLazyLoad';
 import Swiper, { Navigation, Pagination } from 'swiper';
 import csTabs from './js/libs/csTabs';
+import MenuAnchor from './js/libs/MenuAnchor';
 
 import pZooms from './js/f-panzoom.js';
 // import pZoomsH from './js/f-panzoom-horizontal.js';
@@ -160,6 +161,7 @@ function levelsSlider() {
 
 const csapp = new CsApp();
 csapp.addPlugin('lazyLoad', new InterfaceLazyLoad(csapp));
+csapp.addPlugin('MenuAnchor', new MenuAnchor(csapp));
 csapp.pZooms = pZooms;
 
 csapp.addAction("domScripts", adventagesSlider);

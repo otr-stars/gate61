@@ -4,6 +4,13 @@
     margin-bottom: clamp(15px, vw(60px), 60px);
     width: 100%;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:50;
+    background-color: var(--color-white);
+    transition: transform 0.4s ease, top 0.4s ease;
+
     &-logo {
         position: absolute;
         top: 24px;
@@ -11,9 +18,18 @@
         display: block;
         width: clamp(80px, vw(176px), 176px);
         height: auto;
+
+        transition: width 0.4s ease, top 0.4s ease;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &-menu {
+        height: 45px;
+        transition: height 0.4s ease;
 
         a {
             font-size: 17px;
@@ -25,15 +41,40 @@
             }
         }
     }
+
+    &.scrolled {
+
+        .header {
+            
+            &-logo {
+                top: 10px;
+                width: 53px;
+            }
+
+            &-menu {
+                height: 80px;
+            }
+        }
+    }
+
+    &.novisible {
+        transform: translateY(-100%);
+    }
+
+    &.visible {
+        transform: translateY(0%);
+    }
 }
 
 
 
 @media(max-width: 991px) {
     .header {
+        display: flex;
         margin-bottom: 15px;
 
         &-logo {
+            position: static;
             z-index: 99;
             top: 20px;
             width: clamp(80px, vws(110px), 110px);
@@ -46,7 +87,7 @@
             right: 0;
             left: auto;
             width: calc(100vw - clamp(110px, vws(155px), 155px));
-            height: 100vh;
+            height: 100vh!important;
             background-color: var(--color-grey);
             padding: 180px 45px 100px;
             flex-wrap: wrap;
@@ -104,16 +145,19 @@
                 }
             }
         }
-    }
-}
 
-@media(max-width: 767px) {
-    .header {
-        display: flex;
-        align-items: center;
+        &.scrolled {
 
-        &-logo {
-            position: static;
+            .hamburger {
+                margin-top: 20.5px;
+            }
+
+            .header {
+
+                &-menu {
+                    width: calc(100vw - 83px);
+                }
+            }
         }
     }
 }

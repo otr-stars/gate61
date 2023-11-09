@@ -75,3 +75,6 @@ export const whichAnimationEvent = () => {
     }
 }
 
+export const getHashLocation = function () {
+    return window.location.hash.substring(1).replace('/', '')
+}

@@ -25,6 +25,7 @@ body {
 
 main {
     flex: 1 0 auto;
+    margin-top: 125px;
 }
 
 img,
@@ -44,5 +45,13 @@ svg {
 
     &-title {
         display: none;
+    }
+}
+
+
+
+@media(max-width: 991px) {
+    main {
+        margin-top: clamp(160px, vws(200px), 200px);
     }
 }
