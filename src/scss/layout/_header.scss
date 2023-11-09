@@ -64,6 +64,10 @@
     &.visible {
         transform: translateY(0%);
     }
+
+    &.is-active {
+        transform: translateY(0%)!important;
+    }
 }
 
 

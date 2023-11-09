@@ -14,11 +14,13 @@ import pZooms from './js/f-panzoom.js';
 
 
 function initMenu() {
+    let $header = document.querySelector('header.header');
     let $mobileButton = document.querySelector('.hamburger');
     let $menu = document.querySelector('header .header-menu');
     let $body = document.querySelector('body');
     if (!$mobileButton) return;
     $mobileButton.addEventListener('click', function () {
+        $header.classList.toggle('is-active');
         $mobileButton.classList.toggle('is-active');
         $menu.classList.toggle('is-active');
         $body.classList.toggle('no-scroll');
