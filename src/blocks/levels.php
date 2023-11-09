@@ -29,7 +29,7 @@
                     <div class="map" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
                         <div class="map-wrapper">
                             <div class="map-layer">
-                                <img src="<?= wp_get_attachment_image_src(68, 'full')[0] ?>" class="map-img">
+                                <img src="<?= wp_get_attachment_image_src(68, 'full')[0] ?>" class="map-img" width="1633" height="510">
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                     <div class="map" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
                         <div class="map-wrapper">
                             <div class="map-layer">
-                                <img src="<?= wp_get_attachment_image_src(95, 'full')[0] ?>" class="map-img">
+                                <img src="<?= wp_get_attachment_image_src(95, 'full')[0] ?>" class="map-img" width="1633" height="510">
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                     <div class="map" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
                         <div class="map-wrapper">
                             <div class="map-layer">
-                                <img src="<?= wp_get_attachment_image_src(66, 'full')[0] ?>" class="map-img">
+                                <img src="<?= wp_get_attachment_image_src(66, 'full')[0] ?>" class="map-img" width="1633" height="510">
                             </div>
                         </div>
                     </div>

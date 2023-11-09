@@ -18,7 +18,7 @@
                 <div class="map" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
                     <div class="map-wrapper">
                         <div class="map-layer">
-                            <img src="<?= wp_get_attachment_image_src(93, 'full')[0] ?>" class="map-img">
+                            <img src="<?= wp_get_attachment_image_src(93, 'full')[0] ?>" class="map-img" width="1233" height="794"> 
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                 <div class="map" data-x="0" data-y="0" data-zoom_start="1" data-zoom_max="4">
                     <div class="map-wrapper">
                         <div class="map-layer">
-                            <img src="<?= wp_get_attachment_image_src(94, 'full')[0] ?>" class="map-img">
+                            <img src="<?= wp_get_attachment_image_src(94, 'full')[0] ?>" class="map-img" width="1233" height="794">
                         </div>
                     </div>
                 </div>

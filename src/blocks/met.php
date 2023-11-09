@@ -1,7 +1,7 @@
 <div id="met" class="met">
     <div class="met-banner">
         <div class="met-img">
-            <img src="<?= wp_get_attachment_image_src(96, 'full')[0] ?>">
+            <img data-src="<?= wp_get_attachment_image_src(96, 'full')[0] ?>" width="1570" height="823">
         </div>
         <div class="met-text">
             <h2><?php _e('poznaj Gate 61', 'gate') ?></h2>

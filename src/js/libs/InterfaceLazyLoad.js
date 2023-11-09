@@ -4,7 +4,7 @@ export default class InterfaceLazyLoad {
     lazyLoadInstance = [];
     constructor() {
         this.lazyLoadInstance = new LazyLoad({
-            elements_selector: "[data-src]",
+            elements_selector: "[data-src],[data-bg-multi]",
             load_delay: 100,
             callback_reveal: (el) => {
                 if (el.complete && el.naturalWidth !== 0) {

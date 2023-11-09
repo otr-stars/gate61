@@ -2,11 +2,11 @@
     <div class="contact-wrapper">
         <div class="contact-title">
             <h2><?php _e('bądźmy w kontakcie', 'gate') ?></h2>
-            <img src="<?= wp_get_attachment_image_src(61, 'full')[0] ?>">
+            <img data-src="<?= wp_get_attachment_image_src(61, 'full')[0] ?>" width="154" height="86">
         </div>
         <div class="contact-list">
             <div class="contact-person">
-                <div class="img" style="background-image: url('<?= wp_get_attachment_image_src(62, 'full')[0] ?>');"></div>
+                <div class="img"  data-bg-multi="url('<?= wp_get_attachment_image_src(62, 'full')[0] ?>')"></div>
                 <div class="content">
                     <h3 class="name">monika orłowska</h3>
                     <p class="position"><?php _e('Senior Associate Office Landlord Reperesentation', 'gate') ?></p>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="contact-person">
-                <div class="img" style="background-image: url('<?= wp_get_attachment_image_src(60, 'full')[0] ?>');"></div>
+                <div class="img"  data-bg-multi="url('<?= wp_get_attachment_image_src(60, 'full')[0] ?>')"></div>
                 <div class="content">
                     <h3 class="name">piotr komadowski</h3>
                     <p class="position"><?php _e('Senior Associate Office Landlord Representation', 'gate') ?></p>

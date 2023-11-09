@@ -3,7 +3,7 @@
 
     <div class="swiper swiper--adventages">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(74, 'full')[0] ?>');">
+            <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(74, 'full')[0] ?>')">
                 <div class="content">
                     <h3><?php _e('szybki doajzd i wygodna lokalizacja', 'gate') ?></h3>
                     <p>
@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(73, 'full')[0] ?>');">
+            <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(73, 'full')[0] ?>')">
                 <div class="content">
                     <h3><?php _e('lotnisko', 'gate') ?></h3>
                     <p>
@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(71, 'full')[0] ?>');">
+            <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(71, 'full')[0] ?>')">
                 <div class="content">
                     <h3><?php _e('Zielone patio', 'gate') ?></h3>
                     <p>
@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(92, 'full')[0] ?>');">
+            <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(92, 'full')[0] ?>')">
                 <div class="content">
                     <h3><?php _e('okolica pełna udogodnień', 'gate') ?></h3>
                     <p>
@@ -39,7 +39,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(91, 'full')[0] ?>');">
+            <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(91, 'full')[0] ?>')">
                 <div class="content">
                     <h3><?php _e('zmodernizowane wnętrza', 'gate') ?></h3>
                     <p>
@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(72, 'full')[0] ?>');">
+            <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(72, 'full')[0] ?>')">
                 <div class="content">
                     <h3><?php _e('przestronny parking', 'gate') ?></h3>
                     <p>

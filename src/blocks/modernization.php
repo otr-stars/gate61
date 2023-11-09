@@ -8,23 +8,23 @@
         </div>
         <div class="modernization-swiper swiper swiper--modernization">
         <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(84, 'full')[0] ?>');">
+                <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(84, 'full')[0] ?>')">
                     <span><?php _e('funkcjonalny hol wejściowy', 'gate') ?></span>
                 </div>
 
-                <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(83, 'full')[0] ?>');">
+                <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(83, 'full')[0] ?>')">
                     <span><?php _e('lobby wypełnione światłem', 'gate') ?></span>
                 </div>
 
-                <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(82, 'full')[0] ?>');">
+                <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(82, 'full')[0] ?>')">
                     <span><?php _e('hol windowy na piętrze', 'gate') ?></span>
                 </div>
 
-                <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(81, 'full')[0] ?>');">
+                <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(81, 'full')[0] ?>')">
                     <span><?php _e('funkcjonalna przestrzeń biurowa', 'gate') ?></span>
                 </div>
 
-                <div class="swiper-slide" style="background-image: url('<?= wp_get_attachment_image_src(80, 'full')[0] ?>');">
+                <div class="swiper-slide"  data-bg-multi="url('<?= wp_get_attachment_image_src(80, 'full')[0] ?>')">
                     <span><?php _e('nowy standard kuchni i toalet', 'gate') ?></span>
                 </div>
             </div>
