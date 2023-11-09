@@ -35,6 +35,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="location-buttons">
+                    <button class="btn btn-primary zoom-in"><i class="icon icon-plus"></i></button>
+                    <button class="btn btn-primary zoom-out"><i class="icon icon-minus"></i></button>
+                </div>
             </div>
         </div>
     </div>
