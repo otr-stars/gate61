@@ -16,13 +16,8 @@ export default function csTabs(csApp) {
                 if ($target) {
                     $target.classList.add('active');
                     e.target.classList.add('active');
-                    csApp.pZooms.updateAll();
-
                 }
             }
         });
     });
-    setTimeout(function () {
-        csApp.pZooms.updateAll();
-    }, 300);
 }
