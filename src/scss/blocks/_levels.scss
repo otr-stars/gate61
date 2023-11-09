@@ -38,8 +38,8 @@
     &-wrapper {
         position: relative;
         width: 100%;
-        // aspect-ratio: 2 / 1;
-        height: 77vh;
+        aspect-ratio: 16 / 9;
+        max-height: 77vh;
         min-height: 485px;
         background-color: var(--color-grey);
         border-radius: 58px;
@@ -64,10 +64,8 @@
 
         .level-container {
             position: relative;
-            // width: 1440px;
-            height: 0;
-            padding-top: 33.33%;
             margin: auto;
+            height: calc(87% - 45px);
 
             >div {
                 position: absolute;
@@ -178,16 +176,15 @@
 
         &-item {
 
+            .level-container {
+                height: calc(80% - 35px);
 
-
-            .location-buttons {
-                position: initial;
-                padding-top: 30px;
-                justify-content: flex-end;
+                img {
+                    max-height: 245px!important;
+                }
             }
 
             .buttons {
-
                 right: clamp(15px, vws(25px), 25px);
             }
         }
@@ -219,6 +216,7 @@
             border-radius: 0 58px 58px 0;
             min-height: initial;
             aspect-ratio: initial;
+            max-height: initial;
         }
 
         &-header {
@@ -255,19 +253,21 @@
             }
 
             .level-container {
-                padding-top: 100%;
-                // &>div{
-                //     img{
-                //         max-height: 100%;
-                //     }
-                // }
+                width: 100%;
+                height: vws(350px);
+
+                img {
+                    max-height: initial!important;
+                    width: 75vw;
+                    margin: auto;
+                }
             }
 
             .buttons {
-                position: initial;
+                position: initial!important;
                 display: flex;
                 justify-content: end;
-                margin-top: 10px;
+                margin-top: 30px;
 
                 button {
                     margin-right: 10px;
