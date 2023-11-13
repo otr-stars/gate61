@@ -10,10 +10,13 @@ form {
         width: 100%;
         background-color: var(--color-white);
         border: 2px solid var(--color-black-light);
-        padding: 20px 25px;
+        padding: 18px 25px;
         font-size: 18px;
         border-radius: 58px;
         margin-bottom: 15px;
+
+        position: relative;
+        transition: margin-bottom 0.4s ease;
     }
 
     textarea {
@@ -35,6 +38,19 @@ form {
 
         &--full {
             width: 100%;
+        }
+    }
+
+    .wpcf7-not-valid {
+        border-color: var(--color-red);
+        margin-bottom: 35px;
+
+        &-tip {
+            position: absolute;
+            left: 25px;
+            bottom: -42px;
+            font-size: 14px;
+            color: var(--color-red);
         }
     }
 
@@ -74,6 +90,7 @@ form {
     form {
 
         input {
+            padding: 13px 25px;
             margin-bottom: 10px;
         }
 
@@ -81,6 +98,16 @@ form {
 
             &--half {
                 width: calc(50% - 5px);
+            }
+        }
+
+        .wpcf7-not-valid {
+            margin-bottom: 30px;
+    
+            &-tip {
+                left: 12.5px;
+                bottom: -35px;
+                font-size: 12px;
             }
         }
     }
