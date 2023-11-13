@@ -1,6 +1,10 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9WVSJLHJN"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-G9WVSJLHJN');</script>
+    
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title><?php is_home() ? bloginfo('description') : wp_title('|', true, 'right'); ?></title>
