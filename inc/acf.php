@@ -22,7 +22,7 @@ class cwt_acf_custom_blocks
   private $category = "";
   public function __construct()
   {
-    $this->category = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', CWT_THEME_DOMAIN)));
+    $this->category = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', 'cwt')));
     add_filter('block_categories_all', array($this, 'register_block_categories'), 10, 2);
     // $mainpage = acf_add_options_page(array(
     //     'page_title'    => 'Globalne ustawienia szablonu',
@@ -42,7 +42,7 @@ class cwt_acf_custom_blocks
   {
     array_unshift($categories, array(
       'slug' => $this->category,
-      'title' => CWT_THEME_DOMAIN,
+      'title' => 'cwt',
       'icon'  => 'star-filled',
     ));
     return $categories;
@@ -50,20 +50,132 @@ class cwt_acf_custom_blocks
 
   public function register_block_types()
   {
-    // acf_register_block_type(array(
-    //     'name'              => 'circle_text',
-    //     'title'             => '★ ' . __('Tekst w kółku', 'zabka'),
-    //     'description'       => __('Tekst w kółku z opcjonalnym obrazkiem nad', 'zabka'),
-    //     'render_template'   => 'blocks/circle_text.php',
-    //     'category'          =>  $this->category,
-    //     'icon'              => 'align-center',
-    //     // 'post_types' => array('page'),
-    //     'mode' => 'edit',
-    //     'supports' => array(
-    //         'align' => false,
-    //         'anchor' => true,
-    //     ),
-    // ));
+    acf_register_block_type(array(
+        'name'              => 'met',
+        'title'             => '★ ' . __('Poznaj Gate61', 'gate'),
+        'description'       => __('Baner (Poznaj Gate61) z tekstem', 'gate'),
+        'render_template'   => 'src/blocks/met.php',
+        'category'          =>  $this->category,
+        'icon'              => 'align-center',
+        'mode' => 'edit',
+        'supports' => array(
+            'align' => false,
+            'anchor' => true,
+        ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'adventages',
+      'title'             => '★ ' . __('Zalety budynku', 'gate'),
+      'description'       => __('Slider zalet budynku', 'gate'),
+      'render_template'   => 'src/blocks/adventages.php',
+      'category'          =>  $this->category,
+      'icon'              => 'align-center',
+      'mode' => 'edit',
+      'supports' => array(
+          'align' => false,
+          'anchor' => true,
+      ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'location',
+      'title'             => '★ ' . __('Lokalizacja i udogodnienia', 'gate'),
+      'description'       => __('Blok Lokalizacja i udogodnienia wraz z mapami', 'gate'),
+      'render_template'   => 'src/blocks/location.php',
+      'category'          =>  $this->category,
+      'icon'              => 'align-center',
+      'mode' => 'edit',
+      'supports' => array(
+          'align' => false,
+          'anchor' => true,
+      ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'modernization',
+      'title'             => '★ ' . __('Obaszary modernizacji', 'gate'),
+      'description'       => __('Slider obszarów modernizacji z tekstem', 'gate'),
+      'render_template'   => 'src/blocks/modernization.php',
+      'category'          =>  $this->category,
+      'icon'              => 'align-center',
+      'mode' => 'edit',
+      'supports' => array(
+          'align' => false,
+          'anchor' => true,
+      ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'patio',
+      'title'             => '★ ' . __('Zielone patio', 'gate'),
+      'description'       => __('Slider zielonego patia wraz z tekstem', 'gate'),
+      'render_template'   => 'src/blocks/patio.php',
+      'category'          =>  $this->category,
+      'icon'              => 'align-center',
+      'mode' => 'edit',
+      'supports' => array(
+          'align' => false,
+          'anchor' => true,
+      ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'levels',
+      'title'             => '★ ' . __('Rzuty pięter', 'gate'),
+      'description'       => __('Sekcja rzutów pięter', 'gate'),
+      'render_template'   => 'src/blocks/levels.php',
+      'category'          =>  $this->category,
+      'icon'              => 'align-center',
+      'mode' => 'edit',
+      'supports' => array(
+          'align' => false,
+          'anchor' => true,
+      ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'standard',
+      'title'             => '★ ' . __('Standard techniczny', 'gate'),
+      'description'       => __('Sekcja przedstawiająca standard techniczny budynku', 'gate'),
+      'render_template'   => 'src/blocks/standard.php',
+      'category'          =>  $this->category,
+      'icon'              => 'align-center',
+      'mode' => 'edit',
+      'supports' => array(
+          'align' => false,
+          'anchor' => true,
+      ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'numbers',
+      'title'             => '★ ' . __('Fakty i liczby', 'gate'),
+      'description'       => __('Sekcja zawirająca kafelki z faktami i liczbami', 'gate'),
+      'render_template'   => 'src/blocks/numbers.php',
+      'category'          =>  $this->category,
+      'icon'              => 'align-center',
+      'mode' => 'edit',
+      'supports' => array(
+          'align' => false,
+          'anchor' => true,
+      ),
+    ));
+
+    acf_register_block_type(array(
+      'name'              => 'gallery',
+      'title'             => '★ ' . __('Galeria', 'gate'),
+      'description'       => __('Galeria zdjęć', 'gate'),
+      'render_template'   => 'src/blocks/gallery.php',
+      'category'          =>  $this->category,
+      'icon'              => 'align-center',
+      'mode' => 'edit',
+      'supports' => array(
+          'align' => false,
+          'anchor' => true,
+      ),
+    ));
+
   }
 }
 // $cwt_acf_custom_blocks = new cwt_acf_custom_blocks();

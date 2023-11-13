@@ -1,21 +1,33 @@
-<div id="met" class="met">
-    <div class="met-banner">
-        <div class="met-img">
-            <img data-src="<?= wp_get_attachment_image_src(96, 'full')[0] ?>" width="1570" height="823">
+<?php
+$fields = get_fields();
+?>
+
+<?php if(empty($fields['banner']) === false) { ?>
+    <div id="met" class="met">
+        <div class="met-banner">
+            <div class="met-img">
+                <?php if(empty($fields['banner']['img']) === false) { ?>
+                    <img data-src="<?= wp_get_attachment_image_src($fields['banner']['img'], 'full')[0] ?>" width="1570" height="823">
+                <?php } ?>
+            </div>
+            <div class="met-text">
+                <?php if(empty($fields['banner']['title']) === false) { ?>
+                    <h2><?= $fields['banner']['title'] ?></h2>
+                <?php } ?>
+                <?php if(empty($fields['banner']['text']) === false) { ?>
+                    <p><?= $fields['banner']['text'] ?></p>
+                <?php } ?>
+            </div>
         </div>
-        <div class="met-text">
-            <h2><?php _e('poznaj Gate 61', 'gate') ?></h2>
-            <p>
-                <?php _e('Budynek biurowy przy', 'gate') ?>
-                <span><?php _e('Al. Krakowskiej 61 w nowej odsłonie', 'gate') ?></span>
-            </p>
-        </div>
+        <?php if(empty($fields['content']) === false) { ?>
+            <div class="met-content">
+                <?php if(empty($fields['content']['text']) === false) { ?>
+                    <?= $fields['content']['text'] ?>
+                <?php } ?>
+                <?php if(empty($fields['content']['contact']) === false) { ?>
+                    <a href="#contact" class="met-contact btn btn-primary--red"><?= $fields['content']['contact'] ?></a>
+                <?php } ?>
+            </div>
+        <?php } ?>
     </div>
-    <div class="met-content">
-        <p>
-            <?php _e('Funkcjonalny, zlokalizowany u zbiegu najważniejszych szlaków komunikacyjnych i punktów usługowych. Zmodernizowany i dostosowany do bieżących potrzeb pracowników i biznesu, w sąsiedztwie Portu Lotniczego im.Fryderyka Chopina i przy centrum handlowe Okęcie Park.', 'gate') ?>
-            <strong><?php _e('zapraszamy na pokład', 'gate') ?></strong>
-        </p>
-        <a href="#contact" class="met-contact btn btn-primary--red"><?php _e('napisz do nas', 'gate') ?></a>
-    </div>
-</div>
+<?php } ?>

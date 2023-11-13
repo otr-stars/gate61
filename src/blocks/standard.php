@@ -1,42 +1,25 @@
-<div id="standard" class="standard">
-    <h2 class="standard-title"><?php _e('standard <br>techniczny <br>budynku', 'gate') ?></h2>
-    <div class="standard-wrapper">
-        <div class="standard-img"  data-bg-multi="url('<?= wp_get_attachment_image_src(75, 'full')[0] ?>')"></div>
-        <ul class="standard-list">
-            <li class="standard-item standard-item--1">
-                <div class="icon icon-vent"></div>
-                <div class="description"><?php _e('Wentylacja <br>i klimatyzacja', 'gate') ?></div>
-            </li>
+<?php
+$fields = get_fields();
+?>
 
-            <li class="standard-item standard-item--2">
-                <div class="icon icon-sensor"></div>
-                <div class="description"><?php _e('Czujniki <br>dymu', 'gate') ?></div>
-            </li>
+<?php if(empty($fields['feature']) === false) { ?>
+    <div id="standard" class="standard">
+        <?php if(empty($fields['title']) === false) { ?>
+            <h2 class="standard-title"><?= $fields['title'] ?></h2>
+        <?php } ?>
 
-            <li class="standard-item standard-item--3">
-                <div class="icon icon-sprinklers"></div>
-                <div class="description"><?php _e('Zraszacze <br>przeciwpożarowe', 'gate') ?></div>
-            </li>
-
-            <li class="standard-item standard-item--4">
-                <div class="icon icon-lock"></div>
-                <div class="description"><?php _e('System kontroli <br>dostępu', 'gate') ?></div>
-            </li>
-
-            <li class="standard-item standard-item--5">
-                <div class="icon icon-windows"></div>
-                <div class="description"><?php _e('Częściowo <br>otwierane okna', 'gate') ?></div>
-            </li>
-
-            <li class="standard-item standard-item--6">
-                <div class="icon icon-cable"></div>
-                <div class="description"><?php _e('Kable <br>światłowodowe', 'gate') ?></div>
-            </li>
-
-            <li class="standard-item standard-item--7">
-                <div class="icon icon-level"></div>
-                <div class="description"><?php _e('Wysokość kondygnacji <br>2,65 m netto / <br>3,50 m brutto', 'gate') ?></div>
-            </li>
-        </ul>
+        <div class="standard-wrapper">
+            <div class="standard-img"  data-bg-multi="url('<?= wp_get_attachment_image_src($fields['img'], 'full')[0] ?>')"></div>
+            <ul class="standard-list">
+                <?php foreach($fields['feature'] as $item) { ?>
+                    <li class="standard-item standard-item--<?= $item['icon'] ?>">
+                        <div class="icon icon-<?= $item['icon'] ?>"></div>
+                        <?php if(empty($item['text']) === false) { ?>
+                            <div class="description"><?= $item['text'] ?></div>
+                        <?php } ?>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
     </div>
-</div>
+<?php } ?>

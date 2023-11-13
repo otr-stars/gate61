@@ -75,43 +75,43 @@
             transition: opacity 0.4s ease;
         }
 
-        &--1 {
+        &--vent {
             top: vw(66px);
             left: vw(561px);
             font-size: clamp(22px, vw(27px), 27px);
         }
 
-        &--2 {
+        &--sensor {
             top: vw(66px);
             left: vw(1120px);
             font-size: clamp(22px, vw(27px), 27px);
         }
 
-        &--3 {
+        &--sprinklers {
             top: vw(194px);
             left: vw(834px);
             font-size: clamp(28px, vw(36px), 36px);
         }
 
-        &--4 {
+        &--lock {
             top: vw(259px);
             left: vw(128px);
             font-size: clamp(28px, vw(36px), 36px);
         }
 
-        &--5 {
+        &--windows {
             top: vw(289px);
             left: vw(528px);
             font-size: clamp(27px, vw(36px), 36px);
         }
 
-        &--6 {
+        &--cable {
             top: vw(622px);
             left: vw(557px);
             font-size: clamp(27px, vw(36px), 36px);
         }
 
-        &--7 {
+        &--level {
             top: vw(573px);
             left: vw(973px);
             font-size: clamp(35px, vw(45px), 45px);
@@ -150,31 +150,31 @@
                 }
             }
 
-            &--1 {
+            &--vent {
                 font-size: clamp(20px, vws(27px), 27px);
             }
     
-            &--2 {
+            &--sensor {
                 font-size: clamp(20px, vws(27px), 27px);
             }
     
-            &--3 {
+            &--sprinklers {
                 font-size: clamp(26px, vws(36px), 36px);
             }
     
-            &--4 {
+            &--lock {
                 font-size: clamp(26px, vws(36px), 36px);
             }
     
-            &--5 {
+            &--windows {
                 font-size: clamp(25px, vws(36px), 36px);
             }
     
-            &--6 {
+            &--cable {
                 font-size: clamp(25px, vws(36px), 36px);
             }
     
-            &--7 {
+            &--level {
                 font-size: clamp(33px, vws(45px), 45px);
             }
     

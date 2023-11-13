@@ -1,43 +1,45 @@
-<div id="numbers" class="numbers">
-    <div class="numbers-tiles">
-        <div class="numbers-tile numbers-tile--red">
-            <div class="title">19.502 <small>m²</small></div>
-            <span><?php _e('GLA', 'gate') ?></span>
+<?php
+$fields = get_fields();
+?>
+
+<?php if(empty($fields['tiles']) === false) { ?>
+    <div id="numbers" class="numbers">
+        <div class="numbers-tiles">
+            <?php foreach($fields['tiles'] as $item) {
+                if($item['type'] === 'half') { ?>
+                    <div class="numbers-tile numbers-tile--half">
+                        <?php foreach($item['halfs'] as $half) { ?>
+                            <div class="numbers-tile numbers-tile--<?= $item['color'] ?>">
+                                <?php if(empty($half['title']) === false) { ?>
+                                    <div class="title"><?= $half['title'] ?></div>
+                                <?php } ?>
+                                <?php if(empty($half['text']) === false) { ?>
+                                    <span><?= $half['text'] ?></span>
+                                <?php } ?>
+                            </div>
+                        <?php } ?>
+                    </div>
+                <?php } else { ?>
+                    <div class="numbers-tile numbers-tile--<?= $item['color'] ?>">
+                        <?php if(empty($item['title']) === false) { ?>
+                            <div class="title <?php if($item['extended'] === 'text') { echo ' title--extended'; } ?>">
+                                <?= $item['title'] ?> <?php if($item['extended'] === 'unit') {?> <small><?= $item['extended_title'] ?></small> <?php } ?>
+                                <?php if($item['extended'] === 'text') { ?>
+                                    <span><?= $item['extended_title'] ?></span> 
+                                <?php } ?>
+                            </div>
+                        <?php } ?>    
+                        <?php if(empty($item['text']) === false) { ?>
+                            <span><?= $item['text'] ?></span>
+                        <?php } ?>
+                    </div>
+                <?php } ?>
+            <?php } ?>
         </div>
-        <div class="numbers-tile numbers-tile--green">
-            <div class="title">1/36</div>
-            <span><?php _e('współczynnik<br>miejsc parkingowych', 'gate') ?></span>
-        </div>
-        <div class="numbers-tile numbers-tile--black">
-            <div class="title title--extended">
-                319
-                <span><?php _e('miejsc<br>parkingowych', 'gate') ?></span>
-            </div>
-            <span><?php _e('na przylegającym<br>podwyższeniu', 'gate') ?></span>
-        </div>
-        <div class="numbers-tile numbers-tile--green">
-            <div class="title">7.8%</div>
-            <span><?php _e('współczynnik<br>powierzchni wspólnych', 'gate') ?></span>
-        </div>
-        <div class="numbers-tile numbers-tile--black">
-            <div class="title title--extended">
-                235
-                <span><?php _e('miejsc<br>parkingowych', 'gate') ?></span>
-            </div>
-            <span><?php _e('przed bydynkiem', 'gate') ?></span>
-        </div>
-        <div class="numbers-tile numbers-tile--half">
-            <div class="numbers-tile numbers-tile--grey">
-                <div class="title">5</div>
-                <span><?php _e('kondygnacji', 'gate') ?></span>
-            </div>
-            <div class="numbers-tile numbers-tile--grey">
-                <div class="title">6</div>
-                <span><?php _e('wind osobowych', 'gate') ?></span>
-            </div>
+        <div class="numbers-content">
+            <?php if(empty($fields['title']) === false) { ?>
+                <h2><?= $fields['title'] ?></h2>
+            <?php } ?>
         </div>
     </div>
-    <div class="numbers-content">
-        <h2><?php _e('fakty<br>i liczby', 'gate') ?></h2>
-    </div>
-</div>
+<?php } ?>
