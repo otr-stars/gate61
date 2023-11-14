@@ -1,57 +1,89 @@
+<?php
+$fields = get_fields();
+?>
+
 <div class="contact">
-    <div class="contact-wrapper">
-        <div class="contact-title">
-            <h2><?php _e('bądźmy w kontakcie', 'gate') ?></h2>
-            <img data-src="<?= wp_get_attachment_image_src(61, 'full')[0] ?>" width="154" height="86">
-        </div>
-        <div class="contact-list">
-            <div class="contact-person">
-                <div class="img"  data-bg-multi="url('<?= wp_get_attachment_image_src(62, 'full')[0] ?>')"></div>
-                <div class="content">
-                    <h3 class="name">monika orłowska</h3>
-                    <p class="position"><?php _e('Senior Associate Office Landlord Reperesentation', 'gate') ?></p>
-                    <a href="tel:+48 734 217 547" class="phone">+48 734 217 547</a>
-                    <a href="mailto:monika.orlowska@colliers.com" class="mail">monika.orlowska@colliers.com</a>
-                </div>
+    <?php if(empty($fields['contact_person']) === false) { ?>
+        <div class="contact-wrapper">
+            <div class="contact-title">
+                <?php if(empty($fields['title']) === false) { ?>
+                    <h2><?= $fields['title'] ?></h2>
+                <?php } ?>
+                <?php if(empty($fields['logo']) === false) { ?>
+                    <img data-src="<?= wp_get_attachment_image_src($fields['logo'], 'full')[0] ?>" width="154" height="86">
+                <?php } ?>
             </div>
-            <div class="contact-person">
-                <div class="img"  data-bg-multi="url('<?= wp_get_attachment_image_src(60, 'full')[0] ?>')"></div>
-                <div class="content">
-                    <h3 class="name">piotr komadowski</h3>
-                    <p class="position"><?php _e('Senior Associate Office Landlord Representation', 'gate') ?></p>
-                    <a href="tel:+48 664 920 820" class="phone">+48 664 920 820</a>
-                    <a href="mailto:piotr.komadowski@colliers.com " class="mail">piotr.komadowski@colliers.com </a>
+            <?php if(empty($fields['contact_person']) === false) { ?>
+                <div class="contact-list">
+                    <?php foreach($fields['contact_person'] as $item) { ?>
+                        <div class="contact-person">
+                            <?php if(empty($item['img']) === false) { ?>
+                                <div class="img"  data-bg-multi="url('<?= wp_get_attachment_image_src($item['img'], 'full')[0] ?>')"></div>
+                            <?php } ?>
+                            <div class="content">
+                                <?php if(empty($item['fullname']) === false) { ?>
+                                    <h3 class="name"><?= $item['fullname'] ?></h3>
+                                <?php } ?>
+                                <?php if(empty($item['position']) === false) { ?>
+                                    <p class="position"><?= $item['position'] ?></p>
+                                <?php } ?>
+                                <?php if(empty($item['phone']) === false) { ?>
+                                    <a href="tel:<?= $item['phone'] ?>" class="phone"><?= $item['phone'] ?></a>
+                                <?php } ?>
+                                <?php if(empty($item['mail']) === false) { ?>
+                                    <a href="mailto:<?= $item['mail'] ?>" class="mail"><?= $item['mail'] ?></a>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
-            </div>
+            <?php } ?>
         </div>
-    </div>
-    <div class="contact-info">
-        <div class="contact-landlord">
-            <h3 class="title"><?php _e('właściciel budynku', 'gate') ?></h3>
-            <p class="address">
-                Okęcie Park Sp. z o.o.<br>
-                ul. Twarda 18<br>
-                00-105 Warszawa
-            </p>
-            <p class="text">
-                <?php _e('Właścicielem bydunku jest spółka z grupy Onyx Asset Management, firmy działającej na polskim rynku, kompleksowo zarządzającej aktywami nieruchomościowymi. Kluczowi członkowie zespołu od ponad 20 lat wspólnie prowadzą projekty w obszarach restrukturyzacji, M&A, deweloperskim oraz zarządzania dużymi portfelami nieruchomości. Na przestrzeni ostatnich 12 lat zespół poszerzał swoje rozległe doświadczenie w sektorze nieruchomości komercyjnych, biurowych i mieszkaniowych.', 'gate') ?>
-            </p>
-            <a class="link" href="onyx-am.com" target="_blank">www.onyx-am.com</a>
+    <?php } ?>
+
+    <?php if(empty($fields['landlord']) === false || empty($fields['management']) === false) { ?>
+        <div class="contact-info">
+            <?php if(empty($fields['landlord']) === false) { ?>
+                <div class="contact-landlord">
+                    <?php if(empty($fields['landlord']['title']) === false) { ?>
+                        <h3 class="title"><?= $fields['landlord']['title'] ?></h3>
+                    <?php } ?>
+                    <?php if(empty($fields['landlord']['address']) === false) { ?>
+                        <p class="address"><?= $fields['landlord']['address'] ?></p>
+                    <?php } ?>
+                    <?php if(empty($fields['landlord']['text']) === false) { ?>
+                        <p class="text"><?= $fields['landlord']['text'] ?></p>
+                    <?php } ?>
+                    <?php if(empty($fields['landlord']['link']) === false) { ?>
+                        <a class="link" href="<?= $fields['landlord']['link']['url'] ?>" target="<?= $fields['landlord']['link']['target'] ?>"><?= $fields['landlord']['link']['title'] ?></a>
+                    <?php } ?>
+                </div>
+            <?php } ?>
+            <?php if(empty($fields['management']) === false) { ?>
+                <div class="contact-management">
+                    <?php if(empty($fields['management']['title']) === false) { ?>
+                        <h3 class="title"><?= $fields['management']['title'] ?></h3>
+                    <?php } ?>
+                    <?php if(empty($fields['management']['address']) === false) { ?>
+                        <p class="address"><?= $fields['management']['address'] ?></p>
+                    <?php } ?>
+                    <?php if(empty($fields['management']['mail_title']) === false) { ?>
+                        <span class="link-title"><?= $fields['management']['mail_title'] ?></span>
+                    <?php } ?>
+                    <?php if(empty($fields['management']['mail']) === false) { ?>
+                        <a class="link" href="mailto:<?= $fields['management']['mail'] ?>"><?= $fields['management']['mail'] ?></a>
+                    <?php } ?>
+                </div>
+            <?php } ?>
         </div>
-        <div class="contact-management">
-            <h3 class="title"><?php _e('Zarządzanie w budynku', 'gate') ?></h3>
-            <p class="address">
-                metropolitan<br>
-                real estate sp.z o.o.<br>
-                ul. twarda 18<br>
-                00-105 Warszawa
-            </p>
-            <span class="link-title">E-mail:</span>
-            <a class="link" href="mailto:kontakt@gate61.pl" target="_blank">kontakt@gate61.cpl</a>
-        </div>
-    </div>
+    <?php } ?>
+
     <div class="contact-form" id="contact" >
-        <h2 class="title"><?php _e('napisz <br>do nas', 'gate') ?></h2>
-        <?= do_shortcode('[contact-form-7 id="63" title="Contact form PL"]') ?>
+        <?php if(empty($fields['form_title']) === false) { ?>
+            <h2 class="title"><?= $fields['form_title'] ?></h2>
+        <?php } ?>
+        <?php if(empty($fields['form_code']) === false) { ?>
+            <?= do_shortcode($fields['form_code']) ?>
+        <?php } ?>
     </div>
 </div>

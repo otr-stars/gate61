@@ -176,6 +176,20 @@ class cwt_acf_custom_blocks
       ),
     ));
 
+    acf_register_block_type(array(
+      'name'              => 'contact',
+      'title'             => '★ ' . __('Bądźmy w kontakcie', 'gate'),
+      'description'       => __('Sekcja zawierająca informacje kontaktowe', 'gate'),
+      'render_template'   => 'src/blocks/contact.php',
+      'category'          =>  $this->category,
+      'icon'              => 'align-center',
+      'mode' => 'edit',
+      'supports' => array(
+          'align' => false,
+          'anchor' => true,
+      ),
+    ));
+
   }
 }
 // $cwt_acf_custom_blocks = new cwt_acf_custom_blocks();

@@ -10,10 +10,6 @@ get_header();
 <?php endwhile;
 endif; ?>
 
-<main>
-    <?php include get_theme_file_path().'/src/blocks/contact.php'; ?>
-</main>
-
 <?php
 get_footer();
 ?>
