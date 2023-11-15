@@ -180,7 +180,7 @@
                 height: calc(80% - 35px);
 
                 img {
-                    max-height: 245px!important;
+                    max-height: vws(245px)!important;
                 }
             }
 
@@ -257,7 +257,7 @@
                 height: vws(350px);
 
                 img {
-                    max-height: initial!important;
+                    max-height: vws(230px)!important;
                     width: 75vw;
                     margin: auto;
                 }
