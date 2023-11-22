@@ -20,18 +20,24 @@ $fields = get_fields();
                     <div class="levels-header">
                         <h3><?= $item['title'] ?></h3>
                         <ul>
-                            <li>
-                                <?php _e('Powierzchnia netto: ', 'gate') ?>
-                                <span><?= $item['netto'] ?></span>
-                            </li>
-                            <li>
-                                <?php _e('Powierzchnia brutto: ', 'gate') ?>
-                                <span><?= $item['brutto'] ?></span>
-                            </li>
-                            <li>
-                                <?php _e('Dostępna powierzchnia: ', 'gate') ?>
-                                <span><?= $item['available'] ?></span>
-                            </li>
+                            <?php if(empty($item['netto']) === false) : ?>
+                                <li>
+                                    <?php _e('Powierzchnia netto: ', 'gate') ?>
+                                    <span><?= $item['netto'] ?></span>
+                                </li>
+                            <?php endif; ?>
+                            <?php if(empty($item['brutto']) === false) : ?>
+                                <li>
+                                    <?php _e('Powierzchnia brutto: ', 'gate') ?>
+                                    <span><?= $item['brutto'] ?></span>
+                                </li>
+                            <?php endif; ?>
+                            <?php if(empty($item['available']) === false) : ?>
+                                <li>
+                                    <?php _e('Dostępna powierzchnia: ', 'gate') ?>
+                                    <span><?= $item['available'] ?></span>
+                                </li>
+                            <?php endif; ?>
                         </ul>
                     </div>
                     <div class="level-container ">
