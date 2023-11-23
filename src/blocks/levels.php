@@ -10,7 +10,10 @@ $fields = get_fields();
 
         <nav class="levels-nav tabs-nav js-tab">
             <?php foreach($fields['tab']  as $key => $item) { ?>
-                <button class="btn btn-outline tabs-item <?php if ($key === array_key_first($fields['tab'])) { echo ' active'; } ?>" data-target="level_<?= $key?>"><?= $item['title'] ?></button>
+                <button class="btn btn-outline tabs-item <?php if ($key === array_key_first($fields['tab'])) { echo ' active'; } ?>" data-target="level_<?= $key?>">
+                <?= $item['title'] ?>
+                <?php if(empty($item['description']) === false) {  echo ' - ' .  $item['description']; } ?>
+            </button>
             <?php } ?>
         </nav>
 

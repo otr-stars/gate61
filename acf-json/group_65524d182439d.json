@@ -66,6 +66,27 @@
                     "parent_repeater": "field_65524d35b1820"
                 },
                 {
+                    "key": "field_655f4523617e9",
+                    "label": "Opis piętra",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65524d35b1820"
+                },
+                {
                     "key": "field_65524d5db1822",
                     "label": "Zdjęcie",
                     "name": "img",
@@ -175,5 +196,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1699894113
+    "modified": 1700742470
 }
